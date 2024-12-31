@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+    .menu li{
+        list-style: none;
+        
+    }
+    .menu li:hover{
+         list-style: none;
+        color:gold;
+        font-size: 2.2rem;
+       
+    } 
+    .menu{
+        display: flex;
+        font-size: 2rem;
+        color:white;
+        justify-content: space-evenly;
+        
+        box-shadow: 13px 10px 15px rgb(45, 124, 170);
+        padding: 25px;
+        cursor: pointer;    
+        background-color: blue
+    } 
+    .box1{
+        height: 200px;
+        width: 200px;
+        border: 2px solid green;
+    }
+    
+    
+
+
+    .hello li{
+    text-align: center;
+        position:absolute;
+        width: 180px;
+    
+        left: -40px;
+        font-size: 1.3rem;
+        border-bottom: 2px rgb(194, 18, 18);
+        box-shadow: 2px 3px 7px rgb(78, 55, 55) ;
+        background-color: transparent;
+    
+        cursor: pointer;
+
+    }
+    .service:hover .hello{
+        display: block;
+
+    }
+
+    .hello{
+        display: none;
+        position: relative;
+    
+        
+        list-style: none;
+    }
+
+
+    
+
+</style>
+<body>
+
+
+    <div class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li class="service">Services
+            <ul class="hello">
+                <li class="list">Web Development</li><br>
+                <li class="list"> Designing</li><br>
+                <li class="list"> Web developer</li>
+                <li class="list"></li>
+
+            </ul>
+        </li>
+        <li>Contact Us  </li>
+
+    
+    </div>  
+
+    
+</body>
+</html>

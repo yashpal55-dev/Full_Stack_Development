@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Document</title>
+</head>
+<style>
+    
+
+</style>
+<body>
+
+    <button onclick="show()" id="darkmode"  > ></button>
+    
+<button onclick="hide()" id="lightmode"  >❎</button>
+<div id="bag">
+
+    <div class="container">
+
+      <div class="menu">
+            <li > Home</li>
+            <li>About</li>
+            <li id="mydiv" class="" onclick="myFunction()">Course <span class="spn"> ▼</span>
+
+                <ul id="power" >
+                    <li>Power BI</li>
+                    <li>Digital Marketing</li>
+                    <li>Web Development</li>
+                </ul>
+            </li>
+
+
+            
+            <li> Contact-us</li>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+    
+    <!-- <button onclick="myFunction()" id="dropdown">dropdown</button> -->
+
+    <!-- <div id="mydropdown">
+        <a href="#">link</a>
+        <a href="#">link</a>
+    </div> -->
+
+
+    <script>
+
+function show(){
+    document.getElementById("bag").setAttribute("style","display: block;");
+    
+
+document.getElementById("lightmode").setAttribute("style","display: block;");
+document.getElementById("darkmode").setAttribute("style","display: none;");
+}
+
+function hide(){
+    
+     document.getElementById("bag").setAttribute("style","display: none;");
+
+
+
+document.getElementById("darkmode").setAttribute("style","display: block;");
+document.getElementById("lightmode").setAttribute("style","display: none;");
+
+
+}
+        //  myFunction = () => {
+        //     var x = 
+        //     document.getElementById("power");
+        //     if (x.style.display ==="none") {
+        //         x.style.display = "block";
+                
+        //     }
+        //     else{
+        //         x.style.display = "none";
+        //     }
+        //  }
+
+
+        let myFunction = async() => {
+              let re=document.getElementById("power");
+            //   document.write('hello')
+       
+           
+            if (re.style.display === "none") {
+                 re.style.display = "block"
+                
+                
+                
+                
+            }else {
+
+                re.style.display = "none"
+
+}
+
+            
+        }
+        //    document.getElementById("power").setAttribute("style","display:block;")
+
+        
+
+        // function myFunction(){
+        //     document.getElementById("mydropdown").classList.toggle("show");
+        // }
+
+    </script>
+</body>
+</html>
+    
+
+
+
+
+
+
+
+
+

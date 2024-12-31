@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        font-family: "Sixtyfour Convergence", sans-serif;
+        font-size: 45px;
+    }
+   .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .dice{
+        height: 150px;
+        width: 150px;
+    }
+    .dices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+
+    
+
+    <script>
+
+    let name =[ {
+             username : "official",
+             password : 45
+             
+
+         },
+         {
+             username : "ram",
+             password : 45
+             
+
+         }  ];
+
+
+         let username=prompt('Username');
+         let password=prompt('password');
+  
+         
+     
+            
+        
+            if (username===name[1].username && password==name[1].password){
+         
+                    document.write(`
+    <div class="container">
+        <h1>JS LUDO</h1>
+        <div class="dices">
+            <div style="display: flex; flex-direction: column; justify-content: center;align-items: center; margin: 25px; "><h2>Player-1</h2><img src="dice1.jpg" alt="" class="dice" id="dices1"></div>
+            <div style="display: flex; flex-direction: column; justify-content: center;align-items: center; margin: 25px;"><h2>Player-2</h2><img src="dice6.jpg" alt="" class="dice" id="dices2"></div>
+        </div>
+        <button style="height: 50px; width: 100px; font-size: 22px; font-weight: 900; cursor: pointer;" onclick="ludogame()">Play</button>
+    
+
+    </div>
+   
+`)
+
+
+            }else{
+         alert('username is incorrect');
+
+
+            }
+            ;
+
+
+
+                
+        
+            // var pass1="password";
+
+            // password=prompt('Password');
+
+         
+
+      
+
+
+                
+            
+
+
+        //  alert("Welcome to my  site");
+
+
+        //  let name=prompt("Username");
+        //  let pass=prompt("Password");
+
+        
+        
+
+
+
+
+       
+           
+        
+        // if(name!=null){
+        //        let result=document.write("incorrect");
+        //      }else if(name==null){
+        //       document.write("<br>" + result);
+            //  }
+
+           
+
+        //      if(name=false){
+        //         document.write("Nice to meet You user");
+
+        // // let name=confirm("Do you want visit my site");
+
+        //     if(name=true){
+        //         window.open("https://www.youtube.com/watch?v=Sj5iWt4LaDU");  
+        //         return true;
+        //     }
+
+        //     else{
+        //         // document.write("User not interested :) ");
+        //         alert("incorreect");
+        //         return false;
+        //     }
+        //     }
+        
+        
+
+  
+           
+            </script>
+
+             <script>
+                ludogame =() =>{
+        
+                    let ply1=Math.floor(Math.random()*6)+1 ;
+                    let dice1="dice${ply1}.jpg";
+                    document.getElementById("dices1").setAttribute("src",dice1);
+                    
+                    let ply2=Math.floor(Math.random()*6)+1 ;
+                    let dice2="dice${ply2}.jpg";
+                    document.getElementById("dices2").setAttribute("src",dice2);
+        
+        
+                    if(ply1>ply2){
+                        document.querySelector("h1").innerHTML="Player-1 is Winner";
+                    }
+                    else if(ply1<ply2){
+                        document.querySelector("h1").innerHTML="Player-2 is Winner";
+        
+        
+                    }else{
+                        document.querySelector("h1").innerHTML="MATCH DRAW";
+        
+                    }
+                }
+        
+        
+                
+            </script>
+   
+    
+</body>
+</html>

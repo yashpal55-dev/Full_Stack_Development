@@ -1,0 +1,371 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(197, 100, 100);
+    color: white;
+    padding: 6px;
+    flex-wrap: wrap;
+
+}
+.hurry{
+    margin-top: 14px;
+    margin-left: 15px;
+    flex-wrap: wrap;
+
+}
+.up{
+    margin-right: 15px;
+    flex-wrap: wrap;
+
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    box-shadow: 12px 10px 15px rgb(192, 187, 187);
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.arena{
+    
+    width: 15px;
+    flex-wrap: wrap;
+    
+}
+.home {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+    flex-wrap: wrap;
+
+
+    li{
+        margin: 5px;
+    }
+    
+    
+ }
+ @media screen and (max-width:450px){
+    .home {
+        display:none;
+     
+        
+     }
+    
+ }
+ .call{
+    margin-left: 14px;
+    
+    background-color: red;
+    height: 30px;
+    padding: 3px;
+    flex-wrap: wrap;
+
+ }
+ .welcome{
+    font-size: 27px;
+    font-style: oblique;
+    color:brown;
+    text-shadow: 20px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+ }
+ .box{ 
+    display: flex;
+    margin-left: 90px;
+    flex-wrap: wrap;
+
+ }
+ .image{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+    width: 30px;
+    flex-wrap: wrap;
+ }
+ 
+ 
+    h2{
+        font-size: 40px;
+        flex-wrap: wrap;
+
+    }
+    .fields{
+        margin-top: 20px;
+        font-size: 20px;
+        flex-wrap: wrap;
+
+    }
+    .gaming{
+        margin-top: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    .arenaanimation{
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 50px;
+        font-weight: bold;
+        flex-wrap: wrap;
+
+    }
+    .animation{
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+        
+    }
+    .img{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+        flex-wrap: wrap;
+
+    }
+    .vfx{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+        flex-wrap: wrap;
+
+    }
+    .leverage{
+     text-align: center;
+     font-style: oblique;
+     color:rgb(219, 34, 34);
+     text-shadow: 20px;
+     margin-top: 45px;
+     margin-bottom: 20px;
+     flex-wrap: wrap;
+    
+    }
+    .logos{
+        margin-left: 320px;
+        margin-right: 200px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    .choose{
+    text-align: center;
+    font-style: oblique;
+    color:rgb(219, 34, 34);
+    text-shadow: 20px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    flex-wrap: wrap;
+
+
+    }
+    .choosing{
+        margin: 35px;
+        font-size: 1.15rem;
+        margin-left: 60px;
+        margin-right: 60px;
+        color: rgb(70, 67, 67);
+        flex-wrap: wrap;
+
+    }
+    .years{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        margin-left: 80px;
+        margin-right: 164px;
+        margin-top: 75px;
+        flex-wrap: wrap;
+
+    }
+    .pioneers{
+        display: flex;
+        margin-left: 80px;
+        margin-right: 100px;
+        justify-content: space-between;
+        margin-top: 17px;
+        color: rgb(70, 67, 67);
+        flex-wrap: wrap;
+
+    }
+    .world{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        margin-left: 80px;
+        margin-right: 134px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+
+    }
+
+    .equipped{
+        display: flex;
+        margin-left: 80px;
+        margin-right: 85px;
+        justify-content: space-between;
+        margin-top: 17px;
+        color: rgb(70, 67, 67);
+        flex-wrap: wrap;
+
+    }
+
+    .ready{
+        
+    font-style: oblique;
+    color:rgb(219, 34, 34);
+    text-shadow: 20px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+
+    }
+
+    .at{
+        margin-left: 85px;
+        font-size: 1.15rem;
+        color: rgb(70, 67, 67);
+        flex-wrap: wrap;
+
+    }
+    .contact{
+    margin-left: 70px;
+    width: 100px;
+    background-color: red;
+    height: 30px;
+    padding: 3px;
+    color: white;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    
+    }
+    .adventure{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .empowering{
+    text-align: center;
+    font-style: oblique;
+    color:rgb(219, 34, 34);
+    text-shadow: 20px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    }
+    /* We committed to transforming your passion for animation into a thriving career. */
+
+    .we{
+        text-align: center;
+        margin: 40px;
+        font-style: oblique;
+        font-size: 20px;
+        flex-wrap: wrap;
+          
+    }
+    
+    .uber{
+        margin-left: 100px;
+        margin-right: 100px;
+        flex-wrap: wrap;
+
+    }
+    .sparrow{
+        margin-left: 100px;
+        margin-right: 100px;
+        flex-wrap: wrap;
+
+    }
+
+    .testimonials{
+    text-align: center;
+    font-style: oblique;
+    color:rgb(219, 34, 34);
+    text-shadow: 20px;
+    margin-top: 95px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+
+    }
+    .see{
+        text-align: center;
+        margin: 30px;
+        margin-bottom: 0px;
+        font-style: oblique;
+        font-size: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    .insta{
+        display: flex;
+        margin-left: 18px;
+        flex-wrap: wrap;
+
+    }
+     
+    .policy{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
+        
+        margin-bottom: 80px;
+        margin-left: 110px;
+        margin-right: 110px;
+        flex-wrap: wrap;
+       
+
+    }
+    .copy{
+        background-image: url(/images/background\ blue.avif);
+        margin-top: 0px;
+        flex-wrap: wrap;
+        
+
+    }
+    
+    
+
+    .home :hover{
+        font-size: 20.5px;
+        align-items: center;
+        justify-content: center;
+        color: blue
+        
+    }
+
+    .icon{
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        position: fixed;
+        top: 450px;
+        right: 51px;
+        flex-wrap: wrap;
+    }
+    .whatsaap{
+         border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        position: fixed;
+        top: 510px;
+        right: 47px;
+        flex-wrap: wrap;
+    }

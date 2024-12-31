@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="r">
+    <h1 id="peragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, delectus. Eius est eum sit, dolore exercitationem sequi commodi vitae mollitia unde dignissimos natus velit illo! Architecto repellendus cum voluptate nemo.</h1>
+
+    <button onclick="myfun()">click me</button>
+    <button onmousedown="myfun5()">click me</button>
+    <button onclick="myfun1()">dark mode</button>
+    <button onkeydown="myfun2()">click me</button>
+    <button onkeyup="myfun3()">click me</button>
+    <button onmouseleave="myfun4()">click me</button>
+    <img src="45.jpg" id="img" alt="" height="50" width="50" onmouseenter="myfun()" style="animation-duration: 2s;">
+
+
+<script>
+    function myfun(){
+
+        // document.getElementById("peragraph").style.color="red";
+        document.getElementById("img").setAttribute("style","height:150px; width:150px; animation: move 5s infinite");
+        document.getElementById("img").setAttribute("style","height:150px; width:150px");
+
+        
+        // document.getElementById("r").setAttribute("style","background-color:yellow;");
+
+    }
+    function myfun1(){
+
+document.getElementById("peragraph").style.color="white";
+document.getElementById("r").setAttribute("style","background-color:black; color:white ");
+
+}
+function myfun2(){
+
+document.getElementById("peragraph").style.color="red";
+document.getElementById("r").setAttribute("style","background-color:green;");
+
+}
+function myfun4(){
+
+document.getElementById("peragraph").style.color="red";
+document.getElementById("r").setAttribute("style","background-color:orange;");
+
+}
+function myfun3(){
+
+document.getElementById("peragraph").style.color="red";
+document.getElementById("r").setAttribute("style","background-color:brown;");
+
+}
+function myfun5(){
+
+document.getElementById("peragraph").style.color="red";
+document.getElementById("r").setAttribute("style","background-color:black   ;");
+
+}
+</script>
+
+
+</body>
+</html>

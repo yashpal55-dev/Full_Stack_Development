@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div id="weather_city"> </div>
+    <div id="temp"> </div>
+
+
+    <script>
+//         function myDisplayer(some) {
+//   document.getElementById("result").innerHTML = some;
+// }
+//         let promi = new Promise (function(solve,reject){
+            
+//             var altr = setTimeout(altr,3000);
+//             function altr(){    
+//                 solve(document.getElementById("resul").innerHTML = "Hello") ;
+//                 reject(document.getElementById("result").innerHTML = "Error") ;
+
+//             }
+
+//         });
+   
+
+//         promi.then(
+//             function(value) {myDisplayer(value);},
+//             function(error) {myDisplayer(error);}
+//             // document.write("promissess is completed")
+//         );
+
+
+
+// let promise = new Promise(function(resolve, reject){
+//     alert("Hello")
+//     resolve(56)
+// })
+
+// console.log("Hello one");
+
+// setTimeout(function(){
+//     console.log("Hello in 2 seconds")
+// },2000)
+// console.log("My name is" );
+// console.log(promise)
+
+
+
+// function cookfood(){
+//     return new Promise((resolve) =>{
+//         setTimeout(() =>{
+//             console.log("Food is cooked");
+//             resolve();
+//         },3000)
+//     })
+// }
+
+// async function prepareMeal() {
+//     try {
+//         console.log("salt is added");
+//         console.log("Food is still cokking..");
+//         await cookfood();
+//         console.log("Enjoy your meal!");
+//     } catch  {
+//         console.log("something went wrong");
+//     }
+// }
+// prepareMeal();
+
+
+
+// const mypromise = new Promise((resolved,reject) => {
+//     const a = 2, b = 2;
+//     const c = a + b;
+//     if (c === 4) {
+//         resolved(`yes!, ${a} + ${b} = 4`)
+//     }else{
+//         reject(`no!, ${a} + ${b} != 4`)
+//     }
+
+// });
+
+// mypromise.then((m) =>{
+//     console.log(m);
+// }).catch((err) => {
+//     console.log(err);
+// })
+
+
+
+
+// function myfunction(p1, p2) {
+//     return p1 * p2;
+    
+// }
+
+// let result = myfunction(4, 3);
+// document.getElementById("result").innerHTML = result;
+
+
+//   function popup() {
+//     alert("msg");
+//   }
+
+// let p=new Promise((resolve, reject)=>{
+//   let a=2;
+//   let b=4;
+//   let c=a+b;
+//   // resolve(c);
+//   reject(c);
+
+// })
+// p.then((value)=>{
+//   console.log("problem is resolved")
+// })
+// p.catch((err)=>{
+//   console.log("This function is not working")
+// })
+
+//  let  p1= new Promise((resolve, reject) =>{
+//   let api = fetch("https://api.openweathermap.org/data/2.5/weather?q=manali&appid=61d8bf59ff8be81b4c61e6ff3f3f467b");
+
+//   let data= api.json();
+//    resolve(data);
+
+//   reject(api);
+
+// })
+// p1.then(()=>{
+//   console.log("Data Here")
+
+// })
+
+// p1.catch((err)=>{
+//   console.log("Data is not Found");
+// })
+
+
+// async function data(){
+//   let api =await fetch("https://api.openweathermap.org/data/2.5/weather?q=manali&appid=61d8bf59ff8be81b4c61e6ff3f3f467b");
+//   let data=await api.json();
+//   console.log(data)
+
+
+// }
+// data();
+
+
+
+
+
+
+
+
+// let  p1= new Promise((resolve, reject) =>{
+//   let api = fetch("https://api.openweathermap.org/data/2.5/weather?q=manali&appid=61d8bf59ff8be81b4c61e6ff3f3f467b");
+
+//   let data= api.json();
+//    resolve(data);
+
+//   reject(api);
+
+// })
+// p1.then(()=>{
+//   console.log("Data Here")
+
+// })
+
+// p1.catch((err)=>{
+//   console.log("Data is not Found");
+// })
+
+
+let cityName = document.getElementById('weather_city');
+let Temp= document.getElementById('temp');
+
+const getWeatherData = async ()=>{
+
+  const getWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=panipat&appid=61d8bf59ff8be81b4c61e6ff3f3f467b";
+  try {
+    const res = await fetch(getWeatherUrl);
+    const data = await res.json();
+    const { main, name, weather, wind, sys, dt, kjhgf } = data;
+    
+    cityName.innerHTML = `${name}, ${sys.country}, ${wind.speed}`;
+    Temp.innerHTML = `${main.temp}`;
+
+    // console.log(data)
+    
+  }
+  
+  catch (error) {
+    console.log("error");
+  } 
+}
+  
+document.body=addEventListener("load",getWeatherData());
+
+  </script>
+</body>
+</html>

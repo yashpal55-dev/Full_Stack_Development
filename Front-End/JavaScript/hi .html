@@ -1,0 +1,20 @@
+<button onclick="dark()" id="darkmode" style="display: none;"> Show</button>
+
+<button onclick="light()" id="lightmode">hide</button>
+
+function dark(){
+
+       document.getElementById("lightmode").setAttribute("style","display: block;");
+    document.getElementById("darkmode").setAttribute("style","display: none;");
+}
+
+function light(){
+    
+
+    document.getElementById("lightmode").setAttribute("style","display: block;");
+
+    document.getElementById("darkmode").setAttribute("style","display: block;");
+    document.getElementById("lightmode").setAttribute("style","display: none;");
+
+
+}

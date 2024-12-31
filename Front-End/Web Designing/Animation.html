@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animcaton</title>
+</head>
+<style>
+    .box{
+        width: 150px;
+        height: 150px;
+        border: 8px solid red;
+        background-color: yellow;
+        animation: move 1s infinite;
+    }
+    .box1{
+        width: 150px;
+        height: 150px;
+        border: 8px solid red;
+        background-color: yellow;
+        animation: moves 0.2s infinite ;
+        border-bottom: none;
+
+    }
+    @keyframes moves {
+        form  {
+            background-color: rgb(255, 255, 255);  
+        }
+        to {
+            background-color: aqua;
+            border: 2px solid green;
+            margin: 10px;
+            margin-right: 50px;
+            border-bottom: none;
+            /* border-radius: 50%; */
+            height: 150px;
+            width: 150px;
+        }
+    }
+    @keyframes move {
+        100%{
+            background-color: blue;
+        }
+        75%{
+            border-radius: 50%;
+            background-color: rgb(146, 142, 142);
+            border: none;
+            width: 100px;
+        height: 100px;
+        }
+        50%{
+            border-radius: none;
+            background-attachment: black;
+            border: none;
+            width: 50px;
+        height: 50px;
+        }
+        25%{
+            border-radius: 50%;
+            border: 2px soild black;
+            background-color: blueviolet;
+            width: 100px;
+        height: 100px;
+
+        }
+        0%{
+            width: 150px;
+        height: 150px;
+        border: 8px solid red;
+        background-color: yellow;
+        width: 150px;
+        height: 150px;
+        }
+        
+    }
+
+</style>
+<body>
+    <div style="display: flex; justify-content: space-around;">
+
+        <div class="box">
+            
+        </div>
+        <div class="box1">
+            
+        </div>
+    </div>
+</body>
+</html>

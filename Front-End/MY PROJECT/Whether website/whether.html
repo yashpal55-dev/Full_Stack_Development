@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="whether.css">
+    <title>Document</title>
+</head>
+<style>
+    
+
+
+</style>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <input type="text" placeholder="Enter city name" class="text" id="input">
+
+            <div>
+               <button class="btn"> <img src="/Whether website/images/bx-search.svg" alt="" class="search" ></button>
+            </div>
+        </div>
+
+        <div class="cloud">
+            <img src="/Whether website/images/cloud-flat-design-.jpg" alt="" class="sun">
+            
+        </div>
+
+        <div class="degree" id="temp">
+            
+
+        </div>
+
+        <div class="berlin" id="cityName">
+
+            Berlin
+        </div>
+
+
+        <div class="km">
+            
+
+            <div class="prcnt" id="humidity" >
+                    
+            </div>
+
+             <div class="hr" id="wind" >
+            2.68 km/h
+        </div>
+
+        </div>
+
+        <div class="speed">
+        <div class="humidity">Humidity</div>
+        <div class="humidity"> Wind Speed</div>
+        </div>
+
+        <div id="result"></div>
+
+
+
+
+
+        <script>
+
+let Temp= document.getElementById('temp');
+let Wind = document.getElementById('wind');
+let Humidity = document.getElementById('humidity');
+let cityName = document.getElementById('cityName');
+
+
+
+// let kli = ()=>{
+            
+            
+            // var kl=document.getElementById('input').value;
+
+
+// document.getElementById("result").innerHTML = kl;
+            
+        // document.write(kl);
+// let oo=kl;w
+        // console.log(kl);
+
+// }
+
+            
+
+    // let Temp= document.getElementById('temp');
+    // let Wind = document.getElementById('wind');
+    // let Humidity = document.getElementById('humidity');
+
+// https://api.openweathermap.org/data/2.5/weather?q=rohtak&appid=5945be39c88ba4485933ff52b7137180;
+        // const getWeatherData = async ()=>{
+
+    
+// kli(kk);
+
+    
+
+            // let kl=s;
+
+
+    // const getWeatherUrl =  `https://api.openweathermap.org/data/2.5/weather?q=${kl}&appid=ae399ac375f4e3c5d3c23bb4eb725d46`;
+    
+    // try {
+    // const res = await fetch(getWeatherUrl);
+    // const data = await res.json();
+    // const { main, name, weather, wind, sys, dt, kjhgf } = data;
+    
+    // city.innerHTML = `${name}`;
+    // // cityName.innerHTML = `${name}, ${sys.country}, ${wind.speed}`;
+    // Temp.innerHTML = `${main.temp}`.innerHTML = data.main.temp + "*C";
+    // Wind.innerHTML = `${wind.speed}`.innerHTML = data.wind.speed+ "Km/h";
+    // Humidity.innerHTML = `${main.humidity}`.innerHTML = data.main.humidity + "%";
+
+    // console.log(data);
+    
+    // }
+  
+    // catch (error) {
+    //     console.log("error");
+    //         } 
+    //     }
+ 
+// getWeatherData();
+  
+        // document.body=addEventListener("load",getWeatherData());
+
+        const apikey = "ae399ac375f4e3c5d3c23bb4eb725d46";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
+
+        const searchBox = document.querySelector(".box input");
+        const searchBtn = document.querySelector(".box button");
+
+
+        async function checkwhether(city) {
+            const response = await fetch(apiUrl + city + `&appid=${apikey}`);
+            var data = await response.json();
+
+            console.log(data);
+
+    const { main, name, weather, wind, sys, dt } = data;
+
+
+            cityName.innerHTML = `${name}`;
+    // cityName.innerHTML = `${name}, ${sys.country}, ${wind.speed}`;
+    Temp.innerHTML = `${main.temp}`.innerHTML = data.main.temp + "*C";
+    Wind.innerHTML = `${wind.speed}`.innerHTML = data.wind.speed+ "Km/h";
+    Humidity.innerHTML = `${main.humidity}`.innerHTML = data.main.humidity + "%";
+
+        }
+
+
+        searchBtn.addEventListener("click", ()=>{
+            checkwhether(searchBox.value);
+        });
+
+
+        checkwhether();
+
+    
+
+        </script>
+
+
+
+    </div>
+    
+</body>
+</html>

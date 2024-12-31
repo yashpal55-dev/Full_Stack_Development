@@ -1,0 +1,33 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+.navbar{
+    display: flex;
+    font-size: 2rem;
+    color: blue;
+    justify-content: space-evenly;
+    /*  jusify-content = space-evenly, space-aroud, space-between */
+    box-shadow: 12px 10px 15px rgb(192, 187, 187);
+    padding: 15px;
+    cursor: pointer;
+}
+.navbar  li{
+    list-style: none;
+}
+.navbar  li:hover{
+    list-style: none;
+    color: red;
+    /* font-size: 2.5rem; */
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+.image{
+    height: 350px;
+    width: 350px;
+
+}

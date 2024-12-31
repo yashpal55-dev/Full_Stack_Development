@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.stop();
+    
+    </script>
+</head>
+
+
+<body>
+    <button onclick="dark()" id="darkmode" style="display: none;"> dark Mode</button>
+
+    <button onclick="light()" id="lightmode">light Mode</button>
+
+    
+    <div id="hlo" style="height: 200px; width: 600px; border:2px solid black; display: flex; justify-content: center;align-items: center; font-size:52px ; color:black; font-weight: 900;">
+
+    </div>
+    
+    
+    <button onclick="clearInterval(clocks)">stop </button>
+    
+
+    <button onclick="setInterval(clock,1000)">on </button>
+    
+
+                                                                                             
+    
+        
+        <script>
+
+            function dark(){
+                document.getElementById("hlo").setAttribute("style","color:white; background-color:black;height: 200px; width: 600px; border:2px solid black; display: flex; justify-content: center;align-items: center; font-size:52px ;  font-weight: 900;");
+
+                document.getElementById("lightmode").setAttribute("style","display: block;");
+                document.getElementById("darkmode").setAttribute("style","display: none;");
+
+                
+            }
+
+            
+            function light(){
+                document.getElementById('hlo').setAttribute("style"," color:black; background-color:white;height: 200px; width: 600px; border:2px solid black; display: flex; justify-content: center;align-items: center; font-size:52px ; font-weight: 900;");
+
+                document.getElementById("lightmode").setAttribute("style","display: block;");
+
+                document.getElementById("darkmode").setAttribute("style","display: block;");
+                document.getElementById("lightmode").setAttribute("style","display: none;");
+
+
+            }
+            
+         
+            // let day=d.getUTCDate();  
+            // let month=d.getUTCMonth();
+            // let Year=d.getUTCFullYear();
+            // let time = document.write(day +"/"+ month+"/"+Year);
+            // function t(){
+                
+            var clocks=setInterval(clock,1000); 
+            function clock(){
+               var d=new Date();  
+              var times= document.getElementById('hlo').innerHTML=d.toLocaleTimeString();
+
+            }
+            document.write(times);
+
+
+            // }
+
+         
+          
+        </script>
+        <script>
+               var altr = setTimeout(altr,3000);
+            function altr(){
+                alert("lkjhgfdsasdfghjkl");
+            }
+        </script>
+
+       
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+.arrow{
+    height: 40px;
+    width: 60px;
+    font-size: 80px;
+    background-color:transparent;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+
+}
+.image{
+    height: 230px;
+    width: 230px;
+    margin: 20px;
+
+}
+</style>
+<body>
+
+    <div style="display: flex; align-items: center; justify-content:center; height: 80vh;">
+    <button class="arrow" id="prev"> < </button>
+
+     <img src="dice1.jpg" alt="" class="image" id="image">
+
+    <button class="arrow" id="next">></button>
+
+   
+
+
+    <script>
+ 
+    let images = [
+        'dice1.jpg',
+        'dice2.jpg',
+        'dice3.jpg',
+        'dice4.jpg',
+        'dice5.jpg',
+        'dice6.jpg',
+    ];
+
+    let firstimage = 0;
+     let lastimage = images.length -1;
+    let currentimage = 0;
+
+    let nextbtn = document.getElementById('next');
+    nextbtn.addEventListener('click',()=>{
+        
+        let imageTag = document.getElementById('image');
+        currentimage++;  
+        if(currentimage >= lastimage +1){
+            currentimage = 0;
+        }
+
+        imageTag.src = images[currentimage];
+
+    });
+
+
+
+    let prevbtn = document.getElementById('prev');
+
+    prevbtn.addEventListener('click',()=>{
+                                         
+        let imageTag = document.getElementById('image');
+        currentimage--;  
+        if(currentimage <= firstimage){
+            currentimage = 0;
+        }
+
+        imageTag.src = images[currentimage];
+
+    });
+
+
+
+
+
+           </script>
+    
+</div>
+</body>
+</html>

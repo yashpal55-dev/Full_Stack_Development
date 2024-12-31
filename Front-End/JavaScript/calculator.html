@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btnstyle{
+        height: 60px;
+        width: 60px;
+        background-color: rgb(51, 42, 42);
+        color: white;
+        font-size: 16px;
+        border-radius: 40px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        margin-top: 5px;
+        box-shadow: 5px 5px 10px rgba(192, 192, 31, 0.232);
+        cursor: pointer;
+
+    
+        
+        
+    }
+
+    .text{
+        height: 40px;
+        width: 250px;
+        background-color: black;
+        color: whitesmoke;
+        border: none;
+        margin-top: 11px;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: right;
+
+
+    
+    }
+    #ac{
+        background-color: rgba(221, 223, 216, 0.822);
+        color: black;
+    }
+    #orange{
+        background-color: orange;
+        
+    }
+
+    #zero{
+        width: 125px;
+    }
+    
+    .clr{
+        
+        border: 2px solid black;
+        width: 290px;
+        height: 445px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        cursor: pointer;
+    }
+   
+
+</style>
+<body >
+
+    <script>
+     function table(){
+        
+        document.getElementById('del').innerHTML.slice(0,-1);
+        
+    }
+    </script>
+
+    <div class="clr">
+    <form action="">
+        <input class="text" type="text" name="int" id="del"><br>
+
+        <input class="btnstyle" id="ac" type="button" value="AC" onclick="form.int.value =''">
+        <input class="btnstyle" id="ac"  type="button" value="DEL" onclick ="int.value=int.value.toString().slice(0,-1)">
+        <input class="btnstyle" id="ac" type="button" value="%" onclick="form.int.value =(form.int.value)/100">
+        <input class="btnstyle" id="orange" type="button" value="/" onclick="form.int.value +='/'">
+        <br>
+
+        <input class="btnstyle" type="button" value="7" onclick="form.int.value +='7'">
+        <input class="btnstyle" type="button" value="8" onclick="form.int.value +='8'">
+        <input class="btnstyle" type="button" value="9" onclick="form.int.value +='9'">
+        <input class="btnstyle" id="orange" type="button" value="*" onclick="form.int.value +='*'"><br>
+
+        
+        <input class="btnstyle" type="button" value="4" onclick="form.int.value +='4'">
+        <input class="btnstyle" type="button" value="5" onclick="form.int.value +='5'">
+        <input class="btnstyle" type="button" value="6" onclick="form.int.value +='6'">
+        <input class="btnstyle" id="orange" type="button" value="-" onclick="form.int.value +='-'">
+        <br>
+        
+        <input class="btnstyle" type="button" value="1" onclick="form.int.value +='1'">
+        <input class="btnstyle" type="button" value="2" onclick="form.int.value +='2'">
+        <input class="btnstyle" type="button" value="3" onclick="form.int.value +='3'">
+        <input class="btnstyle" id="orange" type="button" value="+" onclick="form.int.value += '+'">
+        <br>
+        
+        
+        <input class="btnstyle" id="zero" type="button" value="0" onclick="form.int.value +='0'">
+        <input class="btnstyle" type="button" value="." onclick="form.int.value +='.'">
+        <input class="btnstyle" id="orange" type="button" value="=" onclick="form.int.value =eval(form.int.value )"><br>
+       
+        <br>
+
+
+
+    </form>
+</div>
+    
+</body>
+</html>

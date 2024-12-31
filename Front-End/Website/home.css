@@ -1,0 +1,1344 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.menu{
+    display:none;
+    justify-content: space-around;
+    color: red;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+
+}
+.service:hover  .courses{
+    display: block;
+}
+.courses{
+    display: none;
+    position: relative;
+    top: -25px;
+    list-style: none;
+   
+}
+.courses li{
+    text-align: center;
+    position: absolute;
+    width: 180px;
+    /* margin: 10px; */
+    left: -40px;
+    font-size: 1.3rem;
+   
+}
+
+@media screen and (min-width:180px) and (max-width:600px) {
+
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        color: red;
+        list-style: none;
+        font-size: 2rem;
+        font-weight: 800;
+        cursor: pointer;
+
+    }
+    .service:hover  .courses{
+        display: block;
+    }
+    .courses{
+        display: none;
+        position: relative;
+        top: -25px;
+        list-style: none;
+       
+    }
+    .courses li{
+        text-align: center;
+        position: absolute;
+        width: 180px;
+        /* margin: 10px; */
+        left: -40px;
+        font-size: 1.3rem;
+       
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu{
+    display: flex;
+    margin: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 150px;
+    
+
+}
+.hover{
+    display: none;
+}
+
+.png{
+    height: 20px;
+    width: 20px;
+
+}
+
+.home{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    text-decoration: none;
+    
+    
+}
+li{
+    margin: 15px;
+}
+
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    
+
+        .hover{
+            display:flex;
+            
+        }
+    
+        .png{
+            height: 30px;
+            width: 30px;
+            margin-left: 130px;
+    
+        }
+        .home{
+            display: none;
+            list-style: none;
+            justify-content: space-evenly;
+            font-size: 1.2rem;
+            
+        }
+        li{
+            margin: 15px;
+            padding-top: 10px;
+        }
+
+    }
+
+
+
+.want{
+    display: flex;      
+    background-color: rgba(11, 79, 204, 0.63);  
+}
+.video{
+    height: 380px;
+    width: 480px;
+    margin-left: 40px;
+    margin-top: 60px;
+}
+.download{
+    display: flex;
+}
+.learn{
+    
+    font-size: 27px;
+    font-weight: 40px;
+    margin: 80px;
+    color: white;
+    margin-right: 0px;
+}
+
+
+
+@media screen and (min-width:180px) and (max-width:600px){
+    
+    .want{
+        display: block;     
+        background-color: rgba(11, 79, 204, 0.63);
+
+    }
+    .video{
+        display:block;
+        height: 300px;
+        width: 350px;
+        margin-left: 0px;
+        margin-top: 60px;
+        background-color:rgba(11, 79, 204, 0.63);
+    }
+    .download{
+        display: flex;
+    }
+    .learn {
+            display: block;
+            font-size: 27px;
+            font-weight: 40px;
+            margin: 10px;
+            color: white;
+            margin-right: 10px;
+            margin-left: 100px;
+    }
+    
+    
+}
+@media screen and (min-width:180px)and(max-width:600px){
+
+    
+}
+
+
+
+.ess{
+    font-size: 20px;
+
+}
+.years{
+    font-size: 22px;
+
+}
+.download{
+        margin-top: 28px;
+
+}
+.course{
+    font-size: 19px;
+    border-radius: 50px;
+    background-color: orange;
+    height: 23px;
+    padding: 2px;
+    width: 240px;
+    text-align: center;
+
+
+}
+.view{
+    font-size: 19px;
+    margin-left:30px;
+    border-radius: 50px;
+    background-color: orange;
+    height: 23px;
+    padding: 2px;
+    width: 180px;
+    text-align: center;
+    
+
+
+}
+.technologies{
+    
+    font-size: 44px;
+    font-weight: bolder;
+
+
+}
+.will{
+    display: flex;
+    margin-left: 80px;
+    margin-top: 70px;
+}
+.java{
+    margin: 10px;
+    margin-left: 140px;
+}
+.corel{
+    height: 70px;
+    width: 80px;
+    margin: 10px;
+
+}
+
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .technologies{
+    
+        font-size: 44px;
+        font-weight: bolder;
+    
+    
+    }
+    .will{
+        display:block;
+        margin-left: 80px;
+        margin-top: 70px;
+    }
+    .java{
+        display: flex;
+        margin: 0px;
+        margin-left: 0px;
+    }
+    .corel{
+        display: none;
+        height: 50px;
+        width: 60px;
+        margin: 7px;
+    
+    }
+    
+    
+
+    
+}
+
+
+
+.popular{
+    display: flex;
+        
+}
+.categories{
+    margin-top: 50px;
+    margin-left: 80px;
+    
+    
+}
+.top{
+    font-size: 20px;
+
+    }
+.coul {
+    font-size: 27px;
+    color: black;
+    padding-top: 38px;
+    
+    
+
+
+}
+.offer{
+    font-size: large;
+    margin-top: 130px;
+    margin-left: 80px;
+    margin-right: 120px;
+}
+@media screen and (min-width:180px) and (max-width:600px) {
+    .popular{
+        display: block;
+        
+    }
+    .categories{
+        margin-top: 50px;
+        margin-left: 80px;
+        
+        
+    }
+    .top{
+        font-size: 20px;
+    }
+    .coul {
+        font-size: 27px;
+        
+        
+    }
+    .offer{
+        font-size: large;
+        margin-top: 130px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+
+    
+}
+
+
+
+.varior{
+    display: flex;
+    margin-top: 60px;
+    height: 230px;
+    width: 280px;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 80px;
+
+    .dca{
+        border-radius: 20px;
+    }
+    .adca{
+        margin-left: 45px;
+        border-radius: 20px;
+    }
+    .accounting{
+        margin-left: 45px;
+        border-radius: 20px;
+    }
+   
+}
+@media screen and (min-width:180px) and (max-width:600px){
+    .varior{
+        display:block;
+        margin-top: 60px;
+        margin-left: 0px;
+        margin-right: 80px;
+    
+}
+.dca{
+    margin-left: 0px;
+    border-radius: 20px;
+    height: 350px;
+     width: 360px;
+        
+}
+.adca{
+    margin-left:0px;
+    border-radius: 20px;
+    height: 350px;
+     width: 360px;
+    
+}
+.accounting{
+    margin-left:0px;
+    border-radius: 20px;
+    height: 350px;
+     width: 360px;
+    
+}
+
+
+
+}
+
+
+    
+
+
+.basic{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.adcacourse{
+    margin-left: 270px;
+}
+.eaccounting{
+    margin-left: 250px;
+}
+
+@media screen and (min-width:180px) and (max-width:600px){
+    
+    
+    .basic{
+        display:block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .dcacourse{
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+    .adcacourse{
+        margin-top: 0px;
+        margin-left: 100px;
+    }
+    .eaccounting{
+        margin-top: 0px;
+        margin-left: 100px;
+    }
+    
+    
+}
+
+
+
+
+
+
+.computer{
+    display: flex;
+    margin-left: 95px;
+    margin-right: 90px;
+}
+.at{
+    margin-right:40px;
+}
+.advance{
+    margin-left: 0px;
+    margin-right: 40px;
+}
+.we{
+    margin-left: 0px;
+    margin-right:10px;
+}
+
+
+
+
+
+.stack{
+    display: flex;
+    margin-top: 120px;
+    height: 230px;
+    width: 280px;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+.mern{
+    margin-left: 0px;
+    border-radius: 20px;
+
+}
+.data{
+    margin-left: 45px;
+    border-radius: 20px; 
+
+}
+.web{
+    margin-left: 45px;
+    border-radius: 20px;
+    
+}
+
+.development{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.mernstack{
+    margin-left: 0px;
+}
+.datastructure{
+    margin-left: 270px;
+}
+.webdesigning{
+    margin-left: 200px;
+}
+
+.place{
+    display: flex;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.best{  
+    margin-left: 0px;
+    margin-right: 50px;
+
+}
+.designed{
+    margin-left: 0px;
+    margin-right: 50px;
+
+}
+.great{
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+
+
+
+
+
+
+.images{
+    display: flex;
+    margin-top: 120px;
+    height: 230px;
+    width: 280px;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+.editing{
+    margin-left: 0px;
+    border-radius: 20px; 
+
+}
+.analysis{
+    margin-left: 45px;
+    border-radius: 20px; 
+
+}
+.marketing{
+    margin-left: 45px;
+    border-radius: 20px; 
+
+}
+
+
+.skills{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.videoediting{
+    margin-left: 10px;
+}
+.dataanalysis{
+    margin-left: 260px;
+}
+.digitalmarketing{
+    margin-left: 255px;
+}
+
+
+.students{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 90px;
+}
+.the{
+    margin-left: 0px;
+    margin-right: 50px;
+
+}
+.program{
+    margin-left: 100px;
+    margin-right: 30px;
+
+}
+.leading{
+    margin-left: 100px;
+    margin-right: 0px;
+
+}
+
+
+
+
+
+
+.jpg{
+    display: flex;
+    margin-top: 120px;
+    height: 230px;
+    width: 280px;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+    
+.python{
+    margin-left: 0px;
+    border-radius: 20px;  
+}
+.graphic{
+    margin-left: 45px;
+    border-radius: 20px; 
+}
+.excel{
+    margin-left: 45px;
+    border-radius: 20px; 
+}
+
+
+.offline{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.with{
+    margin-left: 0px;
+}
+.real{  
+    margin-left: 270px;
+}
+.all{
+    margin-left: 200px;
+}
+
+
+.write{
+    display: flex;
+    margin-left: 95px;
+    margin-right: 90px;
+}
+.lines{
+    margin-left: 0px;
+    margin-right: 30px;
+
+}
+.time{
+    margin-left: 5px;
+    margin-right: 10px;
+
+}
+.over{
+    margin-left: 150px;
+    margin-right: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.enter{
+    height: 400px;
+    margin: 30px;
+    margin-left:0px;
+}
+.dca{
+    height: 250px;
+    width: 330px;
+    margin: 0px;
+    margin-right: 10px;
+    
+
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+}
+.dcacourse{
+    padding-left: 30px;
+    padding-top: 40px;
+}
+.at{
+    margin-left: 25px;
+    padding-top: 10px;
+}
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .enter{
+        height: 1200px;
+        margin: 28px;
+        padding-left: 0px;
+    }
+    .dca{
+        
+        height: 220px;
+        width: 300px;
+        padding: 20px;
+        margin-right: 10px;
+
+
+        padding-top: 40px;
+    }
+    .display{
+        display: flex;
+        flex-direction: column;
+    }
+    .dcacourse{
+        margin-top: 0px;
+        margin-left: 90px;
+        height: 40px;
+        padding-left: 30px;
+        padding-top: 0px;
+    }
+    .at{
+        margin-left: 30px;
+    }
+    .varior{
+        margin-top: 30px;
+    }
+    
+}
+
+ 
+
+  .more{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 400px;
+  }
+
+.click{
+    font-size: 19px;
+    border-radius: 50px;
+    background-color: orange;
+    height: 30px;
+    padding: 3px;
+    width: 180px;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+
+
+}
+.short{
+    font-size: 19px;
+    margin-left:50px;
+    border-radius: 50px;
+    background-color: orange;
+    height: 30px;
+    padding: 3px;
+    width: 180px;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+
+   
+}
+@media screen and (min-width:180px) and (max-width:600px) {
+    .more{
+        display: flex;
+        margin-top: 180px;
+        margin-left: 0px;
+      }
+    
+    .click{
+        font-size: 19px;
+        border-radius: 50px;
+        background-color: orange;
+        height: 23px;
+        padding: 2px;
+        width: 130px;
+        text-align: center;
+        color: white;
+    
+    
+    
+    }
+    .short{
+        font-size: 19px;
+        margin-left:25px;
+        border-radius: 50px;
+        background-color: orange;
+        height: 23px;
+        padding: 2px;
+        width: 170px;
+        text-align: center;
+        color:white;
+    
+       
+    }
+    
+    
+}
+
+
+
+
+.year{
+    background-color: rgba(5, 89, 245, 0.664);
+}
+.quality{
+    display: flex;
+    margin: 60px;   
+    color: white;
+    
+}
+
+.been{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 50px;
+}
+.experience{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.our{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+.education{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 50px;
+}
+.right{
+    font-size: 18px;
+    margin-right: 70px;
+ }
+
+
+ .vision{
+    margin: 20px;
+    margin-top: 50px;
+    margin-right: 55px;
+    display: flex;
+    flex-direction: column;
+ }
+ .empower{
+    font-size: 18px;
+ }
+
+ .webp{
+    margin: 20px;
+    margin-top: 0px;
+    height: 270px;
+    width: 220px;
+    margin-right: 40px;
+ }
+ @media screen and (min-width:180px) and (max-width:600px) {
+    .year{
+        background-color: rgba(5, 89, 245, 0.664);
+    }
+    .quality{
+        display: block;
+        margin: 20px;   
+        color: white;
+        
+    }
+    
+    .been{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        margin-top: 50px;
+    }
+    .experience{
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .our{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    
+    .education{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        margin-top: 50px;
+    }
+    .right{
+        font-size: 18px;
+        margin-right: 70px;
+     }
+    
+    
+     .vision{
+        margin: 20px;
+        margin-top: 50px;
+        margin-right: 55px;
+        display: flex;
+        flex-direction: column;
+     }
+     .empower{
+        font-size: 18px;
+     }
+    
+     .webp{
+        display: none;
+        margin: 20px;
+        margin-top: 0px;
+        height: 270px;
+        width: 220px;
+        margin-right: 40px;
+     }
+     
+ }
+
+
+
+
+
+
+
+
+ .every{
+    display:flex;
+    margin: 50px;
+ }
+ .just{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 50px;
+    
+ }
+
+ .information{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px;
+ }
+
+ .living{
+    margin: 10px;
+    font-size:18px;
+ }
+ .ones{
+    
+    width: 600px;
+ }
+
+ .just{
+    font-weight: 900;
+    font-size: 24px;
+    padding: 40px;
+ }
+ .best{
+    padding: 12px;
+ }
+ @media screen and (min-width:180px) and (max-width:600px) {
+    .every{
+        display:flex;
+        margin: 30px;
+        flex-wrap: wrap;
+     }
+     .just{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        
+        
+     }
+    
+     .information{
+        font-size: 32px;
+        font-weight: bold;
+        margin: 10px;
+     }
+    
+     .living{
+        margin: 0px;
+        font-size:18px;
+     }
+     .ones{
+        
+        width: 250px;
+     }
+    
+     .just{
+        font-weight: 900;
+        font-size: 24px;
+        padding: 20px;
+     }
+     .best{
+        padding: 12px;
+     }
+ }
+
+
+
+
+
+
+
+
+
+ .print{
+    display: flex;
+    padding: 20px;
+    background-color: orange;
+ }
+ .an{
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    
+    
+ }
+.making{ 
+    font-size: 60px;
+    padding-left: 85px;
+    
+}
+.centre{
+    font-size: 30px;
+    padding-left: 85px;
+}
+@media screen and (min-width:180px) and (max-width:600px) {
+    .print{
+        display: flex;
+        padding: 20px;
+        background-color: orange;
+        flex-wrap: wrap;
+     }
+     .an{
+        display: flex;
+        flex-direction: column;
+    
+        padding: 50px;
+        font-weight: 900;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-wrap: wrap;
+        
+        
+     }
+    .making{ 
+        font-size: 50px;
+        padding-left: 15px;
+        
+    }
+    .centre{
+        font-size: 30px;
+        padding-left: 15px;
+    } 
+}
+
+
+
+
+
+
+
+
+
+.media{
+    font-size: 35px;
+    padding: 20px;
+    padding-left: 40%;
+    padding-top: 140px;
+}
+
+.daily{
+    display: flex;
+    padding: 20px;
+    padding-top: 60px;
+    flex-wrap:wrap;
+    cursor: pointer;
+    
+}
+.hunt{
+    height: 0px;
+    padding-left: 20px;
+    
+}
+
+.ani{
+    height: 500px;
+    width: 300px;
+}
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .media{
+        font-size: 35px;
+        padding-top: 40px;
+
+    }
+    
+    .daily{
+        display:block;
+        padding: 0px;
+    }
+    .hunt{
+        height: 0px;
+        padding-left: 10px;
+        
+    }
+    
+    .ani{
+        height: 500px;
+        width: 300px;
+    }
+    
+     
+}
+
+
+
+
+
+
+
+.mail{
+    padding: 40px;
+    display: flex;
+    padding-left: 80px;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    font-size: 19px;
+}
+.subscribe{
+    font-weight: 800;
+    font-size: 24px;
+    padding: 10px;
+}
+.email{
+    padding-top: 20px;
+}
+.text{
+    height: 30px;
+    width: 400px;
+    
+}
+.add{
+    background-color: black;
+    padding-top: 10px;
+    color: white;
+    height: 45px;
+    width: 180px;
+    margin-left: 220px;
+    margin-top: 10px;
+    padding-left: 32px;
+    text-decoration: none;
+    
+}
+.model{
+    padding-left: 200px;
+    padding-top: 40px;
+}
+@media screen and (min-width:180px) and (max-width:600px) {
+    .mail{
+        padding: 0px;
+        display: flex;
+        padding-left:   0px;
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        font-size: 19px;
+    }
+    .subscribe{
+        font-weight: 800;
+        font-size: 24px;
+        padding: 10px;
+    }
+    .email{
+        padding-top: 20px;
+    }
+    .text{
+        height: 30px;
+        width: 280px;
+        
+    }
+    .add{
+        background-color: black;
+        padding-top: 10px;
+        color: white;
+        height: 45px;
+        width: 150px;
+        margin-left: 140px;
+        margin-top: 10px;
+        padding-left: 32px;
+    }
+    .model{
+        display: none;
+        padding-left: 200px;
+        padding-top: 40px;
+    }
+    
+}
+
+
+
+
+
+
+
+.bank{
+    display: flex;
+    padding: 30px;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.help{
+    width: 400px;   
+    padding-left: 50px;
+}
+.log{
+    display: flex;
+    padding: 50px;
+    padding-top: 90px;
+}
+.face{
+    height: 30px;
+    padding-left: 10px;
+}
+.design{
+    width: 300px;
+    padding-top: 100px;
+    padding: 20px;
+}
+.cours{
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.raju{
+    width: 300px;
+    padding-left: 30px;
+}
+.plot{
+    font-size: 19px ;
+    font-weight: 800;
+    padding-top: 15px;
+}
+@media screen and (min-width:180px) and (max-width:600px) {
+    .bank{
+        display: flex;
+        padding: 30px;
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    .help{
+        width: 400px;   
+        padding-left: 50px;
+    }
+    .log{
+        display: flex;
+        padding: 50px;
+        padding-top: 90px;
+    }
+    .face{
+        height: 30px;
+        padding-left: 10px;
+    }
+    .design{
+        width: 300px;
+        padding-top: 100px;
+        padding: 20px;
+    }
+    .cours{
+        padding-bottom: 15px;
+        font-size: 25px;
+    }
+    .raju{
+        width: 300px;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+    .plot{
+        font-size: 19px ;
+        font-weight: 800;
+        padding-top: 0px;
+    }
+    
+}
+
+

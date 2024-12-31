@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<style>
+     *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        background-color:rgb(197, 100, 100);
+        color: white;
+        padding: 6px;
+        flex-wrap: wrap;
+        
+
+    }
+    .hurry{
+        margin-top: 14px;
+        margin-left: 15px;
+        flex-wrap: wrap;
+    }
+    .up{
+        margin-right: 15px;
+        flex-wrap: wrap;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        box-shadow: 12px 10px 15px rgb(192, 187, 187);
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+    .arena{
+        width: 15px;
+        flex-wrap: wrap;
+        
+    }
+    .home {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        list-style: none;
+        text-decoration: none;
+        flex-wrap: wrap;
+
+        li{
+            margin: 5px;
+        }
+        
+        
+     }
+     .call{
+        margin-left: 14px;
+        background-color: red;
+        height: 30px;
+        padding: 3px;
+        color: white;
+        flex-wrap: wrap;
+     }
+     .courses{
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 45px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+
+     }
+     .offers{
+            text-align: center;
+            margin: 27px;
+            font-style: oblique;
+            font-size: 20px;
+            color: rgb(70, 67, 67);
+            flex-wrap: wrap;
+
+     }
+     .real{
+        display: flex;
+        margin: 80px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        margin-left: 60PX;
+        margin-right: 60PX;
+        flex-wrap: wrap;
+     }
+     .time{
+        display: flex;
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+
+     }
+     .width{
+        display: flex;
+        color: rgb(70, 67, 67);
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-size: 1.15rem;
+        justify-content: space-evenly;
+        margin-left: 25px;
+        margin-right: 5px;
+        flex-wrap: wrap;
+
+     }
+     .motion{
+        display: flex;
+        margin: 80px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        margin-left: 60PX;
+        margin-right: 60PX;
+        flex-wrap: wrap;
+
+     }
+     .graphic{
+        display: flex;
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+
+     }
+     .unleash{
+        display: flex;
+        color: rgb(70, 67, 67);
+        text-shadow: 20px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-size: 1.15rem;
+        justify-content: space-evenly;
+        margin-left: 30px;
+        margin-right: 7px;
+        flex-wrap: wrap;
+
+     }
+     .digital{
+        display: flex;
+        margin: 80px;
+        margin-bottom: 20px;
+        margin-left: 60PX;
+        margin-right: 30PX;
+       justify-content: space-between;
+       flex-wrap: wrap;
+     }
+     
+     .dive{
+        display: flex;
+        color: rgb(70, 67, 67);
+        text-shadow: 20px;
+        margin-top: 14px;
+        margin-bottom: 25px;
+        font-size: 1.15rem;
+        justify-content: space-evenly;
+        margin-left: 35px;
+        margin-right: 0px;
+        flex-wrap: wrap;
+
+     }
+     .design{
+        display:flex;
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 60px;
+        margin-right: 50px;
+        flex-wrap: wrap;
+        
+     }
+     .vfx{
+        display: flex;
+        margin: 80px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+        flex-wrap: wrap;
+
+     }
+     .master{
+        
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+
+     }
+     .growing{
+        display: flex;
+        color: rgb(70, 67, 67);
+        text-shadow: 20px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-size: 1.15rem;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+        flex-wrap: wrap;
+
+     }
+     .ui{
+        display: flex;
+        margin: 80px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+        flex-wrap: wrap;
+
+     }
+     .ux{
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+
+
+
+     }
+     .companies{
+        display: flex;
+        color: rgb(70, 67, 67);
+        text-shadow: 20px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-size: 1.15rem;
+        justify-content: space-between;
+        margin-left: 55px;
+        margin-right: 35px;
+        flex-wrap: wrap;
+
+     }
+     .editing{
+        display: flex;
+        margin: 80px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+        flex-wrap: wrap;
+     }
+     .time{
+        text-align: center;
+        font-style: oblique;
+        color:rgb(219, 34, 34);
+        text-shadow: 20px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+
+     }
+     .effects{
+        display: flex;
+        color: rgb(70, 67, 67);
+        text-shadow: 20px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-size: 1.15rem;
+        justify-content: space-between;
+        margin-left: 55px;
+        margin-right: 50px;
+        flex-wrap: wrap;
+
+     }
+     .policy{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+            margin-bottom: 80px;
+            margin-left: 110px;
+            margin-right: 110px;
+            flex-wrap: wrap;
+           
+
+        }
+        .copy{
+            background-image: url(/images/background\ blue.avif);
+
+        }
+
+        .home :hover{
+            font-size: 20.5px;
+            align-items: center;
+            justify-content: center;
+            color: blue
+            
+        }
+
+        .icon{
+            border-radius: 50%;
+            height: 45px;
+            width: 45px;
+            position: fixed;
+            top: 450px;
+            right: 51px;
+            flex-wrap: wrap;
+        }
+        .whatsaap{
+             border-radius: 50%;
+            height: 45px;
+            width: 45px;
+            position: fixed;
+            top: 510px;
+            right: 47px;
+            flex-wrap: wrap;
+        }
+
+        .insta{
+            display: flex;
+            margin-left: 18px;
+            flex-wrap: wrap;
+
+        }
+
+</style>
+
+<body>
+    
+    <div class="container">
+
+        <div class="hurry">
+            Hurry Up! Special Monthly Offer - Limited Time Only!</div>
+
+            <div class="up">
+            <a href="https://www.instagram.com/_yash_pal_276?igsh=OGQ5ZDc2ODk2ZA=="><img src="/images/instagram new.png" alt=""></a>
+            <a href="https://www.facebook.com/profile.php?id=100015481119985&mibextid=ZbWKwL"><img src="/images/facebook.png" alt=""></a>
+            <a href="#"><img src="/images/linkedin.png" alt=""></a>
+            
+            
+            
+            </div>
+        
+    </div>
+    <div class="menu">
+        <div class="arena">
+        <img src="/images/Arena Animation.png" alt="" style="height: 60px; "> </div>
+
+        
+        <div class="home" style="text-decoration: none;">
+          <a href="/index.html" style="text-decoration: none;"><li>Home </li></a>
+          <a href="/courses.html" style="text-decoration: none;"><li> Courses +</li></a>
+          <li>   Student work</li>
+          <li> Blogs</li>
+          <a href="/About.html" style="text-decoration: none;"><li> About</li></a>
+          <li> Contact  </li>
+          
+          <div class="call">
+          <a href="#" style="text-decoration: none;"> Call Now</a>     
+        </div>
+          
+        </div>
+                </div>
+
+                <div>
+                    <img src="/images/student.png" alt="" style="width: 99.99%;">
+                </div>
+                <div class="courses">
+                <h1>Arena Courses</h1>
+
+                </div>
+                <div class="offers">
+                    Arena Animation offers a variety of relevant and comprehensive programs to make students ready for a successful future.
+                </div>
+                <div class="real">
+                    <div>
+                        <img src="/images/course img2.jpg" alt="" style="height: 380px; width: 570px;">
+                    </div>
+                    <div>
+                        <img src="/images/course img3.jpg" alt=""style="height: 380px; width: 570px;">
+                    </div>
+                </div>
+                <div class="time">
+                    <div style="margin-left:9px;">
+                       <h1> Real Time 3D & VFX</h1>
+                    </div>
+                    <div style="margin-left: 329px;">
+                        <h1>Digital Content Creation</h1>
+                    </div>
+                </div>
+                <div class="width">
+                    <div>
+                        With our Real-me 3D & VFX Program, you can weave the threads of désign and
+                        <div>
+                        visualization, breathe life into 3D models, master CGI to transform the ordinary</div>
+                        <diV> into the extraordinary, and also delve into the specific aspects of visual effects.</diV>
+                        </div>
+                    <div>
+                        <div>Unleash your creativity with our Digital Content Creation Program, where ideas</div>
+                    <div> leap from your imagination into digital reality. Navigate the essentials of visual</div> <div>storytelling, animate with purpose, and design with innovation.</div>
+                </div>
+                    </div>
+                     
+                    <div class="motion">
+                        
+                        <div>
+                            <img src="/images/course img4.jpg" alt=""style="height: 380px; width: 570px;">
+                        </div>
+                        <div>
+                            <img src="/images/course img5.jpg" alt=""style="height: 380px; width: 570px;">
+                        </div>
+
+                    </div>
+                    <div class="graphic">
+                        <div style="margin-left: 60px;">
+                           <h1> Motion Graphics</h1>
+                        </div>
+                        <div style="margin-left: 385px;">
+                          <h1>  VFX Prime</h1>
+                        </div>
+
+                    </div>
+                    <div class="unleash">
+
+                        <div>
+                         Unleash the dynamic world of motion graphics with our Digital Content-Motion 
+                         <div>Graphics Program. Immerse yourself in the synergy of animation and graphic</div>
+                         <div> design, where your creativity brings stories to life through movement. Master the</div> <div>art of visual narratives, embrace the rhythm of animation and design with
+                            <div> motion in mind.</div>
+                        </div>
+
+                        </div>
+
+                     <div>
+                    <div>Where reality meets and blends with the imagination, VFX begins. The demand</div>
+                    <div> for VFX has been rising relentlessly with the production of movies and television</div>
+                    <div> shows set in fantasy worlds with imaginary creatures like dragons, magicalV</div>
+                     <div>realms, extraterrestrial planets and galaxies and more.</div>
+                        </div>
+
+                    </div>
+
+                    <div class="digital">
+                        <div>
+                            <img src="/images/course img6.png" alt=""style="height: 380px; width: 570px;">
+                            <img src="/images/course img7.webp" alt="" style="height: 380px; width: 570px; margin-left: 50px;">
+                        </div>
+
+                    </div>
+                    <div class="design">
+                        <div>
+                          <h1 > Graphic Design</h1>
+                        </div>
+                        <div style="margin-left: 420px;">
+                           <h1> Digital Content Design</h1>
+                        </div>
+
+                    </div>
+                    <div class="dive">
+                    <div>
+                      <div>Graphic design is the art and practice of creating visual content to communicate</div>  <div>information and ideas to the world. Since graphic design is an essential part of</div>
+                      <div> modern marketing and communication, our program is built to strengthen your</div>
+                      <div>creative imagination and skills.</div> 
+                        </div>
+                        <div style="margin-left:30px;">
+                      <div> Dive into the realm of user interface design with our Digital Content – UI</div> 
+                      <div> Design Program. Here, design meets functionality, guiding your journey   </div>
+                      <div>through the art of creating intuitive and aesthetically pleasing digital interfaces.</div>
+                        </div>
+
+                    </div>
+
+            <div class="vfx">
+                <div>
+                    <img src="/images/Courses img8.jpg" alt=""style="height: 380px; width:580px;">
+
+                </div>
+                <div>
+                    <img src="/images/course img9.png" alt="" style="height: 380px; width: 565px; margin-right: 0px;">
+                </div>
+
+            </div>
+            <div>
+                <div class="master">
+                    <div>
+                       <h1> Animation  VFX & Gaming</h1>
+                    </div>
+                    <div style="margin-left: 275px;">
+                       <h1> 3D Motion Graphic</h1>
+                    </div>
+                </div>
+
+                    <div class="growing">
+                        <div style="margin-left: 10px;">
+                         The growing demand for Animation, VFX and Gaming professionals has 
+                         <div>significantly led to a tremendous need for professionals. Our Animation, VFX</div>
+                         <div> and Gaming Prime Program is designed to fulfil this demand by equipping </div>
+                         <div>students with the latest tools & techniques.</div>
+                          
+                        </div>
+                        <div>
+                         Master simple to complex principles of design & motion graphics with 3D
+                         <div> Motion Graphic Prime. The program enables you to understand the concepts </div>
+                         <div>of photography, cinematography, graphics & illustrations with utmost</div>
+                         <div> precision.</div>
+                        </div>
+
+                    </div>
+                
+                
+                <div class="ui">
+                    <div>
+                        <img src="/images/course img10.png" alt=""style="height: 380px; width:570px;">
+                    </div>
+                    <div>
+                        <img src="/images/course img11.webp" alt=""style="height: 380px; width: 570px; margin-left: 55px;">
+                    </div>
+
+                </div>
+                <div class="ux">
+                    <div>
+                      <h1>  Web Design & Development</h1>
+                    </div>
+                    <div style="margin-left: 260px;">
+                        <h1>UI/UX Design</h1>
+                    </div>
+
+                </div>
+                <div class="companies">
+                    <div>
+                        Companies  across the world and across industries are taking the digital route,
+                        <div> opening up a great number of career opportunities. While the projected job</div>
+                        <div>growth for web developers from 2014 through 2024 is 27%*, the graphic</div>     
+                        <div> design industry is predicted to grow 7% from 2015 to 2022**.</div>    
+                    </div>
+                    <div>
+                        Today , there’s no business that doesn’t have an online presence. Digital is  
+                        <div> slowly yet steadily becoming mainstream and seems to be the need of the hour. </div>
+                        <div>That’s how UI/UX has become a fundamental part of the digital world; be it</div>
+                         <div>through e-commerce, company websites or mobile apps.</div>
+                    </div>
+
+                </div>
+                <div class="editing">
+                    <div>
+                        <img src="/images/course img12.webp" alt=""style="height: 380px; width:580px;">
+                    </div>
+                    <div>
+                        <img src="/images/course img13.webp" alt=""style="height: 380px; width: 565px; margin-left: 30px;">
+                    </div>
+
+                </div>
+                <div class="time">
+                <div>
+                    <h1>VFX Composition & Editing</h1>
+
+                </div>
+                <div style="margin-left: 257px;">
+                    <h1>Real Time 3D Cinematics</h1>
+                </div>
+            </div>
+
+                <div class="effects">
+                    <div>
+                        The world  of visual effects relies on VFX Compositors & Video Editors 
+                        <div>who integrate live action footage and computer graphics</div>
+                        <div>and draw out the emotion of the story. Therefore, Arena Animation has</div>
+                        <div> introduced the VFX Compositing & Editing Program.</div>
+                    </div>
+                    <div>
+                        The introduction of Real-Time 3D Cinematics now gives you the advantage 
+                        <div>to give your imagination a 3D edge. Convey compelling</div>
+
+                        <div>stories by blending in colors & creativity with Unreal Engine. Our program </div> 
+                        <div>will train you with the latest design tools & techniques.</div>
+                    </div>
+
+                </div>
+
+
+                    <div class="copy">
+                <div class="policy">
+                    <div style="margin-top: 50px;">
+                        <img src="/images/Arena Animation.png" alt="" srcset="" style="height: 80px;">
+
+                        <div class="insta">
+                            <a href="https://www.instagram.com/_yash_pal_276?igsh=OGQ5ZDc2ODk2ZA=="><img src="/images/instagram new.png" alt="" srcset="" style="height: 40px;"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100015481119985&mibextid=ZbWKwL"><img src="/images/facebook.png" alt="" srcset=""style="height: 40px;"></a>
+                            <a href="#"><img src="/images/linkedin.png" alt=""style="height: 40px;"></a>
+
+                        </div>
+                        <div style="margin-top: 20px; margin-left: 30px;" >
+                         <a href="#">Privacy policy</a>
+                        </div>
+
+                    </div>  
+
+                    <div class="details" style="margin-top: 50px;">
+                        <h3>contact details</h3>
+                       <div style="margin-top: 5px;" > Phone No.: +918701987748</div>
+                       <div style="margin-top: 5px;" > Email ids:Info@arena-gurgaon.in & </div>
+                      <div style="margin-top: 5px;" > sales.mgroad.gurugram@gmail.comm</div>
+                      <div style="margin-top: 5px;" >  Address:Arena Animation,k2/5 lower ground</div>
+                      <div style="margin-top: 5px;" > floor DLF phase 2 (opp Shara Mall) Gurgaon</div>
+                      <div  style="margin-top: 5px;">122002</div> 
+
+                    </div>
+                    <div class="share" style="margin-top: 50px;">
+                        <h3>Share your e-mail to receive updates!</h3>
+                        <h3>Email</h3>
+
+
+                        <div> <input type="text" style="width: 180px; height: 30px; margin-top: 10px;" ></div>
+                        
+                        <div><input type="Submit" style="font-size: 19px; height: 50px; width: 90px; background-color:rgb(179, 48, 48) ; color: white;margin-top: 17px; margin-bottom: 28px;" ></div>
+                        
+                    </div>
+                       
+                    </div>
+                    <hr>
+
+                 </div>
+                 <div style="text-align: center; margin-top: 20px; margin-bottom: 30px; color: rgb(70, 67, 67);">
+                 Copyright 2024  Shoogle Enterprises LLP All Rights Reserved
+                </div>
+            </div>  
+
+
+            <div class="icon">
+                <div>
+                <a href="#"><img src="/images/phone-call (2).png" alt="" style="margin: 12px;" height="35px" width="35px"></a>
+                </div>
+                <div class="whatsaap">
+                <a href="#"><img src="/images/icons8-whatsapp-48.png" alt=""></a>
+                </div>
+
+            </div>
+            
+
+                    
+
+    
+</body>
+</html>

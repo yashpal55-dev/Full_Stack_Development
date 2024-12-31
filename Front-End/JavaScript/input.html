@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btnstyle{
+        border: 2px solid red;
+        height: 50px;
+        width: 70px;
+
+    }
+</style>
+
+<body>
+    <form action="">
+        <input type="text" name="int"><br>
+
+        
+        
+        
+        
+        <input class="btnstyle" type="button" value="1" onclick="form.int.value += '1'">
+        <input class="btnstyle" type="button" value="2" onclick="form.int.value += '2'">
+        <input class="btnstyle" type="button" value="*" onclick="form.int.value += '/'">
+        <br>
+        <input class="btnstyle" type="button" value="1" onclick="form.int.value += '1'">
+        <button class="btnstyle" type="button" value="5" onclick="form.int.value += '5'">5</button>
+        <input class="btnstyle" type="button" value="2" onclick="form.int.value += '2'">
+        <input class="btnstyle" type="button" value="*" onclick="form.int.value += '/'">
+        
+        <br>
+        <input class="btnstyle" type="button" value="=" onclick="form.int.value =eval(form.int.value )">
+
+
+
+    </form>
+</body>
+</html>

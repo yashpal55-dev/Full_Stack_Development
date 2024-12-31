@@ -1,0 +1,194 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: skyblue;
+    
+
+}
+
+.box{
+    display: flex;
+    margin-top: 30px;
+}
+
+@media screen and (min-width:180px) and (max-width:600px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        background-color: skyblue;
+        
+
+}
+.box{
+    display: flex;
+    margin-top: 0px;
+}
+}
+
+    
+
+
+.text{
+    height: 50px;
+width: 300px;
+font-size: 22px;    
+border: none;
+border-radius: 50px;
+text-align: center;
+outline: none;
+font-weight: 600;
+letter-spacing:1px ;
+text-transform: capitalize;
+
+}
+
+.search{
+    height: 50px;
+    margin-left: 25px;
+    cursor: pointer;
+
+}
+.btn{
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (min-width:180px) and (max-width:600px){
+
+    .text{
+        height: 50px;
+        width: 300px;
+        font-size: 22px;    
+        border: none;
+        border-radius: 50px;
+        text-align: center;
+        outline: none;
+        }
+        
+        .search{
+        height: 50px;
+        margin-left: 25px;
+        cursor: pointer;
+        
+        }
+        .btn{
+        border-radius: 50px;
+        background-color: transparent;
+        border: none;
+        }
+        
+}
+
+
+
+.sun{
+    height: 200px;
+    
+}
+
+
+.degree{
+    font-size: 55px;
+font-weight: 900;
+}
+.berlin{
+    font-size: 28px;
+    margin-top: 10px;
+    
+}
+
+@media screen and (min-width:180px) and (max-width:600px){
+    .sun{
+        height: 200px;
+        
+    }
+    
+    
+    .degree{
+        font-size: 55px;
+    font-weight: 900;
+    }
+    .berlin{
+        font-size: 28px;
+        margin-top: 10px;
+        
+    }
+    
+    
+}
+
+
+.cntry{
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+.km{
+    display: flex;
+    font-size: 30px;
+margin-top: 40px;
+
+}
+
+.prcnt{
+margin: 10px;
+margin-right: 5px;
+}
+.hr{
+    margin: 10px;
+    margin-left: 50px;
+}
+.speed{
+display: flex;
+
+}
+.humidity{
+margin:20px;
+margin-right: 40px;
+}
+
+@media screen and (min-width:180px) and (max-width:600px){
+    .cntry{
+        font-size: 45px;
+        font-weight: 500;
+        margin-top: 10px;
+    
+    }
+    .km{
+        display: flex;
+        font-size: 30px;
+    margin-top: 40px;
+    
+    }
+    
+    .prcnt{
+    margin: 10px;
+    margin-right: 5px;
+    }
+    .hr{
+        margin: 10px;
+        margin-left: 50px;
+    }
+    .speed{
+    display: flex;
+    
+    }
+    .humidity{
+    margin:20px;
+    margin-right: 40px;
+    }
+}

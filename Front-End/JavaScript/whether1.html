@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="input">
+    <button id="demo">btn</button>
+    <h1 id="h"></h1> -->
+
+    <input placeholder="Enter some text" name="name" id="input">
+    <p id="values"></p>
+
+    <button class="btn"> <img src="/images/bx-search.svg" alt="" id="button" ></button>
+
+
+    <script>
+
+        // let data = () =>{
+
+        //     // var val =document.getElementById('input');
+        //     document.getElementById("result").innerHTML = kl;
+            
+        //     document.write(val);
+        // };
+        // data();
+
+        // document.getElementById("h").innerHTML=val;
+
+
+//         element.addEventListener("click", myFunction);
+
+// function myFunction() {
+//   document.getElementById("input").innerHTML = "Hello World";
+// }
+
+// const input = document.querySelector("input");
+// const log = document.getElementById("values");
+
+// input.addEventListener("input", updateValue);
+
+// function updateValue(e) {
+//   log.textContent = e.target.value;
+// }
+
+
+
+
+const getWeatherData = async (city)=>{
+
+    
+// kli(kk);
+
+
+
+//  let fn = document.getElementById('values').value;
+
+
+const getWeatherUrl =  "https://api.openweathermap.org/data/2.5/weather?q=&appid=ae399ac375f4e3c5d3c23bb4eb725d46";
+
+
+const searchBox = document.getElementById(".search input");
+const searchBtn = document.getElementById(".search button");
+
+try {
+const res = await fetch( city + getWeatherUrl);
+const data = await Response.json();
+const { main, name, weather, wind, sys, dt, kjhgf } = data;
+
+city.innerHTML = `${name}`;
+// cityName.innerHTML = `${name}, ${sys.country}, ${wind.speed}`;
+Temp.innerHTML = `${main.temp}`.innerHTML = data.main.temp + "*C";
+Wind.innerHTML = `${wind.speed}`.innerHTML = data.wind.speed+ "Km/h";
+Humidity.innerHTML = `${main.humidity}`.innerHTML = data.main.humidity + "%";
+
+console.log(data);
+
+}
+
+catch (error) {
+console.log("error");
+} 
+
+
+
+}
+
+searchBtn.addEventListner("click", ()=> {
+    getWeatherData(searchBox.value);
+})
+
+
+
+
+ getWeatherData();
+ document.body=addEventListener("load",getWeatherData());
+
+    </script>
+</body>
+</html>

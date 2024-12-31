@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+        padding: 20px;
+        padding-right: 120px;
+        flex-wrap: wrap;
+        margin: auto;
+        border: 2px solid black;
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        font-family: 'Comic Sans MS';
+        
+      
+    }
+    .btn{
+        
+        display: flex;
+        margin: auto;
+        height: 60px;
+        width: 80px;
+        font-size: 20px;
+        border: 2px green;
+        border-radius: 150px ;
+        margin-top: 10px;
+        background-color: rgb(17, 172, 17);
+    }
+
+
+
+    
+   
+</style>
+<body>
+
+    <div class="container">
+        <h3 id="quots">Quotes Here</h3><br>
+        <h6 id="author"> Quotes Authore name</h6>
+
+    </div>
+    <p id="btn1"></p>
+    
+   <Button id="btn" >New Quotes</Button > 
+
+
+    <script>
+        let element = document.getElementById("btn");
+
+        var text =  ()=> {
+
+            // let element1 = document.getElementById("btn");
+            
+            
+            var rem = Math.floor(Math.random() * 50);
+            
+        };
+        
+        
+        let getquotes = async ()=> {
+        
+            // console.log(rem);
+            let quotesapi = "a.json";
+        try {
+            let data = await fetch(quotesapi);
+            let realdata = await data.json();
+            var remdata = realdata[`${rem}`].q;
+            
+            var author = realdata[`${rem}`].a;
+                
+                
+                
+            document.getElementById('quots').innerHTML = remdata;
+            
+            document.getElementById('author').innerHTML = author;
+            text();
+                
+                
+                
+                
+            } catch (error) {
+                
+            }
+
+        }
+        // window.open(getquotes);
+        // const element = document.getElementById("btn");
+        
+        
+        element.addEventListener("click",  text);
+        
+
+        getquotes();
+        
+        
+    </script>
+   
+
+</body>
+</html>

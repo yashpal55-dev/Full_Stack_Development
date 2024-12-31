@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .body{
+             display: flex;
+             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+       
+
+        
+        .btn{
+            height: 30px;
+
+        }
+
+        .txt{
+            margin-top: 20px;
+        }
+        .result{
+            border: 2px solid black;
+            width: 60px;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 50px;
+            align-content: center;
+        }
+        .input{
+            display: flex;
+        }
+
+        .click{
+            margin-top: 20px;
+            margin-left: 0%;
+            height: 32px;
+            width: 60px;
+           
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="body">
+    
+<div style="display: flex;">
+<button  id="kilometer" class="btn" onclick="show()">kilometer</button>
+
+<button  id="meter" class="btn" onclick="mtr()" >Meter</button>
+
+<button  id="milimeter" class="btn" onclick="mlimtr()">Millimeter</button>
+<br>
+</div>
+
+
+<div style="display: flex; ">
+<!-- <h2 id="fun" style="visibility: hidden;">
+    
+</h2> -->
+
+<h2 id="mtr" ></h2>
+
+<!-- <h2 id="mlimtr" style="visibility: hidden;" >
+    Milimeter to Meter  
+</h2> -->
+</div>
+
+
+
+<div class="input">
+    
+<input type="text"  id="text" class="txt">
+
+<div id="result" class="result">
+
+</div>
+</div>
+
+<div style="display: flex;">
+<button  id="kilo" class="click" onclick="kli()">click</button> 
+
+<button   id="metr" class="click" onclick="metr()" style="visibility: hidden;">click</button>
+
+<button  id="mlmtr" class="click" onclick="calculate()"  style="visibility: hidden;" >click</button>
+</div>
+
+
+<script>
+
+     function show(){
+
+        document.getElementById("mtr").innerHTML='kilometer to Meter';
+
+        document.getElementById("fun").setAttribute("style","display:block;");
+
+        document.getElementById("mtr").setAttribute("style","visibility:hidden;");
+
+       
+
+        document.getElementById("kilo").setAttribute("style","visibility:visible;");
+
+        document.getElementById("metr").setAttribute("style","visibility:hidden;");
+
+        document.getElementById("mlmtr").setAttribute("style","visibility:hidden;");
+
+        document.getElementById("mlimtr").setAttribute("style","visibility:hidden;");
+        
+
+        
+        
+        
+        
+    }
+    
+    function mtr(){
+        document.getElementById("mtr").innerHTML=' Meter to Cm';
+    
+
+        document.getElementById("mtr").setAttribute("style","display:block;");
+        
+        document.getElementById("fun").setAttribute("style","visibility:hidden;");
+
+       
+
+        document.getElementById("metr").setAttribute("style"," visibility:visible;");
+
+
+        document.getElementById("kilo").setAttribute("style","visibility:hidden;");
+
+        document.getElementById("mlimtr").setAttribute("style","visibility:hidden;");
+
+
+
+
+
+
+
+        
+     }
+
+     function mlimtr(){
+       
+         document.getElementById("mtr").innerHTML=' Mili. to Mtr.';
+
+        document.getElementById("fun").setAttribute("style","visibility:hidden;");
+
+        document.getElementById("mtr").setAttribute("style","visibility:hidden;");
+
+        document.getElementById("mlmtr").setAttribute("style"," visibility:visible;");
+
+        document.getElementById("mlmtr").setAttribute("style","visibility:visible;");
+
+        document.getElementById("mlimtr").setAttribute("style"," visibility:visible;");
+
+        document.getElementById("metr").setAttribute("style","visibility:hidden;");
+
+
+
+
+
+
+
+
+     }
+
+
+
+
+
+      let kilometer=15;
+        function kli(){
+            
+            
+            let kl=document.getElementById('text').value;
+    
+        document.getElementById("result").innerHTML=kl*1000;
+        }
+
+
+        let meter=10;
+        function metr(){
+            let mtr=document.getElementById('text').value;
+
+            document.getElementById("result").innerHTML=mtr*100;
+        }
+
+
+       let milimeter=15;
+
+       function calculate(){
+        let ml=document.getElementById('text').value;
+        
+        document.getElementById('result').innerHTML=ml/1000;
+       }
+
+        
+
+
+</script>
+
+
+
+
+
+
+</div>
+</body>
+</html>

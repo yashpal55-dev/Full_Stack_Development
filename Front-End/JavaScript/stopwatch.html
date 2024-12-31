@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    .stopwatch{
+        
+        padding: 20px 24px;
+        border-radius: 10px;
+        
+    }
+    .timer{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    
+    .button{
+        margin-top: 20px;
+       }
+       
+     .btn{
+        font-size: 18px;
+        background: none;
+        border: none;
+        color:white;
+        background-color: black;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+       
+     } 
+     
+     .play{
+      background-image: url(/play_btn-removebg-preview.png);
+      margin-top: 10px;
+      font-size: 18px;
+      background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 50px;
+        padding: 30px;
+        height: 50px;
+        width: 80px;
+        
+     }
+
+
+     .mystyle{
+      background-image: url(/pausebtn-removebg-preview.png);
+       margin-top: 10px;
+      font-size: 18px;
+      background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50px;
+        width: 80px;
+     }
+
+
+
+
+</style>
+
+<body>  
+    <audio controls id="audio">
+        <source src="in-slow-motion-inspiring-ambient-lounge-219592.mp3" type="audio/ogg">
+        <source src="in-slow-motion-inspiring-ambient-lounge-219592.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+
+
+    <h1 id="watch">Stopwatch</h1>
+    <div class="stopwatch">
+        <div class="timer">
+            <span id="hr">00</span>.
+            <span id="min">00</span>.
+            <span id="sec">00</span>
+
+
+        
+        </div>
+    </div>
+
+
+        <div class="button">
+            <button onclick="start()" id="startbtn" class="btn">Start</button>
+            <button onclick="stop()" id="stopbtn"class="btn">Stop</button>
+            <button onclick="reset()" id="resetbtn"class="btn" >Reset</button>
+            
+        </div>
+        <button  onclick=" myFunction()" class="play" id="mydiv" ></button>
+        <img src="" alt="">
+
+
+    <script>
+
+        var hr = 0;
+        var min = 0;
+        var sec = 0;
+        
+        var timer = false;
+
+        function start(){
+            timer = true;
+            stopwatch();
+            audio();
+
+
+        }
+
+        function stop(){
+            timer = false;
+            document.getElementById("audio").pause();
+
+
+
+        }
+
+        function reset(){
+            timer = false;
+
+              hr = 0;
+            min = 0;
+            sec = 0;
+
+             document.getElementById("hr").innerHTML = "00";
+            document.getElementById("min").innerHTML = "00";
+            document.getElementById("sec").innerHTML = "00";
+            document.getElementById("audio").pause();
+
+
+            
+        }
+
+        function stopwatch(){
+            if (timer == true) {
+                  sec = sec+1;
+                   
+                  if (sec == 60) {
+                    min = min + 1;
+                    sec = 0;
+                    document.getElementById("watch").style.color="red";
+                    document.getElementById("audio").play();
+                    
+                  }
+                  if (min == 60) {
+                    hr = hr+1;
+                    min = 0;
+                    sec = 0;
+                    
+                  }
+
+                  var hrstring = hr;
+                  var minstring = min;
+                  var secstring = sec;
+
+                  if (hr < 10) {
+                    hrstring = "0" + hrstring;
+                  }
+                  if (min < 10) {
+                    minstring = "0" + minstring;
+                  }
+                  if (sec < 10) {
+                    secstring = "0" + secstring;
+                  }
+
+
+                  document.getElementById("hr").innerHTML = hrstring;
+                  document.getElementById("min").innerHTML = minstring;
+                  document.getElementById("sec").innerHTML = secstring;
+
+
+                setTimeout( "stopwatch()",1000);
+        
+            }
+            
+        }
+
+        function myFunction() {
+          var element = document.getElementById("mydiv");
+           element.classList.toggle("mystyle");
+        }
+
+        // function audio(){
+            
+        //     if (sec == 10) {
+        //         document.getElementById("audio").innerHTML= start;
+                
+            
+                
+        //     }
+        // }
+
+        
+        // function start(){
+        //     timer=true;
+        //     myfun();
+        // }
+        // function stop(){
+        //     timer= false;
+        //     myfun();
+        // }
+
+
+        // function myfun(){
+        //     if(timer == true){
+        //         milli = milli + 1;
+        //         if (milli == 100) {
+        //             sec = sec+1;
+        //             milli=0;
+                    
+        //         }
+        //         if (sec == 60) {
+        //             min =min + 1;
+        //             sec=0
+                    
+        //         }
+        //         if (min ==60) {
+        //             hr = hr + 1
+        //             min = 0;
+                    
+        //         }
+
+
+        //         setTimeout("myfun()",10 )
+
+        //     }
+        
+        // }
+
+
+     
+   
+   
+ 
+ 
+//  for (var num = 8; num <=10; num++ )  {
+     
+     
+//      function time(){
+//          var play=document.write(num);
+         
+//          document.write(play);
+//         } 
+//         setInterval(time,1000);
+        
+//     }
+        
+       
+   
+    </script>
+    <script>
+      document.write(Math.PI);
+      document.write("<br>")
+      document.write(Math.pow(5,5));
+      document.write("<br>")
+      document.write(Math.round(5.4));
+      
+      document.write("<br>")
+      document.write(Math.ceil(5.9));
+      document.write("<br>")
+      document.write(Math.random(5));
+      document.write("<br>")
+
+      document.write(Math.sqrt(49));
+      document.write("<br>")
+      document.write(Math.floor(4.9));
+      document.write("<br>")
+      document.write(Math.abs(-4.9));
+      document.write("<br>")
+      document.write(Math.min(0, 150, 30, 20, -8, -200));
+      document.write("<br>")
+      document.write(Math.floor(Math.random() * 9999));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

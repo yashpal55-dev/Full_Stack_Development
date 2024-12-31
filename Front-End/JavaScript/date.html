@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+    <h1 id="fun">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias ipsam consequatur sunt voluptatem dolorem nihil at, veritatis debitis corporis, magni quod vel nostrum sed quia ab commodi itaque, voluptates repudiandae.
+    </h1>
+    <p id="time"></p>
+
+  
+    
+    <button onclick="show()" id="tap" style="display: none;">show me</button >
+    <button onclick="hide()" id="pop" >hide me</button >
+
+    <script>
+        function show(){
+            document.getElementById("fun").setAttribute("style","display:block; color:red");
+            document.getElementById("pop").setAttribute("style","display: block;");
+            document.getElementById("tap").setAttribute("style","display: none;");
+
+
+
+
+        }
+        function hide(){
+            document.getElementById("fun").setAttribute("style","visibility:hidden;");
+            document.getElementById("tap").setAttribute("style","display: block;");
+            document.getElementById("pop").setAttribute("style","display: none;");
+
+
+
+        }
+
+        let d=new Date();
+        let day=d.getUTCDate();
+        let month=d.getUTCMonth();
+        let Year=d.getUTCFullYear();
+
+        // let year=d.
+        document.write("<br>")
+
+        document.write(d);
+        document.write("<br>")
+        document.write(day +"/"+ month+"/"+Year);
+        document.write("<br>")
+
+        let n=d.getTime();
+        document.write(n);
+         hour=d.setHours(20);
+         mint=d.getMinutes();
+         sec=d.getSeconds();
+
+        document.write("<br>");
+        document.write(hour+":"+mint+":"+sec);
+        Timess=d.toLocaleTimeString();
+
+        document.getElementById("time").innerHTML=Timess;
+
+
+
+
+
+
+      
+
+    </script>
+    
+</body>
