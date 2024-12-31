@@ -1,0 +1,17 @@
+h2{
+    border: 5px solid red;
+}
+.electronic{
+    color: green;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 5px solid red;
+    margin: 5px;
+    background-color: aqua;
+
+}
+#tv{
+    color: blue;
+    font-size: 3rem;
+    border: 3px solid yellow;
+}

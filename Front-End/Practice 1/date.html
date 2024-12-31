@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+    
+          
+
+       <script>
+
+        let d=new Date();
+        let day=d.getUTCDate();
+        let month=d.getUTCMonth();
+        let Year=d.getUTCFullYear();
+
+        
+        document.write("<br>");
+
+        document.write(d);
+        document.write("<br>");
+        document.write(day +"/"+ month+"/"+Year);
+        document.write("<br>")
+
+        let n=d.getTime();
+        document.write(n);
+         hour=d.setHours(20);
+         mint=d.getMinutes();
+         sec=d.getSeconds();
+
+        document.write("<br>");
+        document.write(hour+":"+mint+":"+sec);
+        
+        Timess=d.toLocaleTimeString();
+
+        document.getElementById("time").innerHTML=Timess;
+
+
+
+
+
+
+      
+
+    </script>
+    
+</body>

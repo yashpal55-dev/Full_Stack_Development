@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result{
+        border: 5px solid red;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+    <input type="text" id="kl" >
+    <button onclick="kli()">click</button>
+    <div id="result"></div>
+    <script>
+        document.write(Math.PI);
+        document.write("<br>")
+        document.write(Math.pow(5,2));
+        document.write("<br>")
+        document.write(Math.round(5.5));
+
+        document.write("<br>")
+        document.write(Math.round(5.5));
+        document.write("<br>")
+
+
+        let kiltometer=15;
+        function kli(){
+            let kl=document.getElementById('kl').value;
+        // reslult=document.write(kl);
+        document.getElementById('result').innerHTML=kl*1000;
+
+
+        }
+       
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
