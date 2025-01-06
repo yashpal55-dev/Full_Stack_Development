@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photographer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('/image/image\ about.jpg') no-repeat center center/cover;
+  color: white;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.container {
+  text-align: left;
+  padding: 70px;
+  
+  
+}
+
+.content h1 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.content p {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.quote-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.quote-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.email {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.email:hover {
+  color: lightblue;
+}
+</style>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Hello<br>I'm Jackson</h1>
+      <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+      <div class="buttons">
+        <button class="quote-btn">Get A Quote</button>
+        <a href="mailto:hello@name.com" class="email">hello@name.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

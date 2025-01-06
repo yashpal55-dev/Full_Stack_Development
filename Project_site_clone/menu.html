@@ -6,6 +6,82 @@
     <link rel="stylesheet" href="/Css/menu.css">
     <title>Document</title>
 </head>
+<style>
+  *{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.menu{
+    display: flex;
+    background-color: black;
+    padding: 15px;
+    justify-content: space-between;
+    
+}
+
+.alime{
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+}
+
+
+.home{
+    display: flex;
+    list-style: none;
+    /* flex-direction: row; */
+    
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    width: 38%;
+    
+}
+.home a li{
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-between;
+    color: white;
+    
+
+}
+.home a{
+    text-decoration: none;
+    justify-content: space-between;
+
+}
+
+.courses{
+    display: none;
+    position: relative;
+    top: -5px;
+    list-style: none;
+    z-index: 100;
+    border: 2px solid red;
+    
+}
+
+.service:hover  .courses {
+    display: block;
+}
+
+.courses li {
+    text-align: center;
+    position: absolute;
+    width: 180px;
+    margin: 10px;
+    left: -80px;
+    font-size: 1.3rem;
+   
+ } 
+
+
+
+
+
+</style>
 <body>
     <div class="menu">
 
