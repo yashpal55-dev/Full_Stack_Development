@@ -128,14 +128,240 @@
 
 
 
-/* 
-    .animate__animated  {
-  display: inline-block;
-  margin: 0 0.5rem; */
+/* we live for passion */
+.passion-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
 
-  /* animation: bounce; referring directly to the animation's @keyframe declaration */
-  /* animation-duration: 2s; don't forget to set a duration! */
-/* } */
+.content {
+  flex: 1;
+  /* max-width: 50%; */
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 3px solid #e74c3c;
+  display: inline-block;
+}
+
+.content p {
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 2;
+  width: 95%;
+}
+
+.contact-btn {
+  
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  color: #141313;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: 1s;
+}
+
+.contact-btn:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.image-container {
+  /* flex: 1; */
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+/* why choose us  */
+ .why-choose-us {
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    .why-choose-us h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .feature-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      /* transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; */
+      transition: 1s;
+    }
+    .feature-box:hover {
+      /* transform: translateY(-10px); */
+      background-color: #f66;
+      /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); */
+    }
+    .icon {
+      background-color: #f66;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      /* transition: background-color 0.3s ease; */
+      transition: 1s;
+    }
+    .feature-box:hover .icon {
+      background-color: #000;
+    }
+    .icon img {
+      width: 30px;
+      height: 30px;
+      /* filter: brightness(0) invert(1); */
+      /* transition: filter 0.3s ease; */
+    }
+    /* .feature-box:hover .icon img { */
+      /* filter: brightness(0) invert(0); */
+    /* } */
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #444;
+      /* transition: color 0.3s ease; */
+      transition: 1s;
+    }
+    .feature-box:hover h3 {
+      color: #fff;
+    }
+    .feature-box p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+    .feature-box:hover p {
+      color: #ddd;
+    }
+
+
+
+    /* our team */
+    .team {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.team-member:hover {
+    background-color: #ff6347;
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+.team-member:hover h3,
+.team-member:hover p {
+    color: #fff;
+}
+
+.member-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin: 15px 0 5px;
+    font-size: 18px;
+}
+
+.team-member p {
+    color: #777;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+
+
+
+
+
+.follow-instagram {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.follow-instagram h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.follow-instagram p {
+    font-size: 18px;
+    color: #777;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 
   </style>
 </head>
@@ -193,20 +419,146 @@
   </div>
 
 
-  <section>
-    
-    <div>
-      <div>
+  <!-- <section> -->
+<!--      -->
+    <!-- <div> -->
+      <!-- <div> -->
 
-        <h1>We live For Passion</h1>
+        <!-- <h1>We live For Passion</h1> -->
 
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio neque at maiores doloribus beatae distinctio tenetur, corrupti, similique in tempora magni? Reiciendis, sapiente! Ab mollitia veniam asperiores dolore quas eius culpa voluptas repudiandae doloremque. Eius, sapiente. Aspernatur, accusantium numquam?</div>
+        <!-- <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio neque at maiores doloribus beatae distinctio tenetur, corrupti, similique in tempora magni? Reiciendis, sapiente! Ab mollitia veniam asperiores dolore quas eius culpa voluptas repudiandae doloremque. Eius, sapiente. Aspernatur, accusantium numquam?</div> --> 
 
-      </div>
-      <div></div>
+      <!-- </div> -->
+      <!-- <div></div> -->
+    <!-- </div> -->
+
+  <!-- </section> -->
+
+  <section class="passion-section">
+    <div class="content">
+      <h1>We Live For Passion</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      </p>
+      <button class="contact-btn">Contact Us</button>
     </div>
-
+    <div class="image-container">
+      <img src="/image/passion img.webp"/>
+    </div>
   </section>
+
+
+
+
+
+  <section class="why-choose-us">
+    <h1>Why Choose Us</h1>
+    <div class="features">
+      <div class="feature-box">
+        <div class="icon">
+          <img src="/image/movie icon.png" alt="Film Icon">
+        </div>
+        <h3>High Quality Images</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">
+          <img src="/image/icons8-pencil-100.png" alt="Pencil Icon">
+        </div>
+        <h3>Abundant Experience</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">
+          <img src="/image/download camera icon.png" alt="Camera Icon">
+        </div>
+        <h3>Modern Equipments</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="team">
+    <h1>Our Team</h1>
+    <div class="team-container">
+        <div class="team-member">
+            <div class="member-image">
+                <img src="/image/our team img1.webp" alt="Andrew Dean">
+            </div>
+            <h3>Andrew Dean</h3>
+            <p>Photographer</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-image">
+                <img src="/image/our team img2.webp" alt="Tommy Kim">
+            </div>
+            <h3>Tommy Kim</h3>
+            <p>Photographer</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-image">
+                <img src="/image/our team img3.webp" alt="Max McCormick">
+            </div>
+            <h3>Max McCormick</h3>
+            <p>Photographer</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-image">
+                <img src="/image/our team img4.webp " alt="Robert Ward">
+            </div>
+            <h3>Robert Ward</h3>
+            <p>Photographer</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="follow-instagram">
+  <h1>Follow Instagram</h1>
+  <p>@Alime_photographer</p>
+</section>
+
+
+
+
+
+
+
 
 
 
