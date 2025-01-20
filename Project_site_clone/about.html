@@ -1,85 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photographer Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  
+  
+
+  <!-- <link rel="stylesheet" -->
+  <!-- href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+
 </head>
-<style>
+  <style>
+    html,
     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url('/image/image\ about.jpg') no-repeat center center/cover;
-  color: white;
-  height: 130vh;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-}
+      position: relative;
+      height: 100%;
+    }
 
-.container {
-  text-align: left;
-  padding: 70px;
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .text {
+      position: absolute;
+
+      left: 80px;
+      
+    
+    }
+    .text h1 {
+      font-size: 74px;
+
+      font-weight: 850;
+      background-image: red;
+      text-align: left;
+      margin-left: 20px;
+      background-image: linear-gradient(rgb(244, 143, 143), rgb(235, 226, 105));
+     color: transparent;
+     background-clip: text;
   
-  
+      
+    }
+    .i{
+      font-size: 20px;
+      color: #fff;
+      width: 660px;
+      text-align: left;
+    }
+
+    #btn {
+      width: 150px;
+      height: 40px;
+      background: transparent;
+      border-radius: 40px ;
+      border: 2px solid #d94949;
+      color: #fefcfc;
+      font-size: 16px;  
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 1s;
+
+    }
+
+    #btn:hover{
+      background-color: #d94949;
+   
+      /* color: #731a1a; */
+    }
+
+   
+
+.animate__animated.animate__fadeInUpBig {
+  --animate-duration: 1.5s;
 }
 
-.content h1 {
-  font-size: 3em;
-  font-weight: bold;
-  line-height: 1.2;
-  margin: 0;
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
-.content p {
-  margin: 15px 0;
-  font-size: 1.1em;
+
+.animate__animated.animate__fadeInDownBig {
+  --animate-duration: 1.5s;
 }
 
-.buttons {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
-.quote-btn {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
-}
 
-.quote-btn:hover {
-  background-color: white;
-  color: black;
-}
 
-.email {
-  color: white;
-  font-size: 1em;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+/* 
+    .animate__animated  {
+  display: inline-block;
+  margin: 0 0.5rem; */
 
-.email:hover {
-  color: lightblue;
-}
-</style>
+  /* animation: bounce; referring directly to the animation's @keyframe declaration */
+  /* animation-duration: 2s; don't forget to set a duration! */
+/* } */
+
+  </style>
+</head>
+
 <body>
-  <div class="container">
-    <div class="content">
-      <h1>Hello<br>I'm Jackson</h1>
-      <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
-      <div class="buttons">
-        <button class="quote-btn">Get A Quote</button>
-        <a href="mailto:hello@name.com" class="email">hello@name.com</a>
+  <!-- Swiper -->
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        
+        <div class="text animate__animated animate__fadeInUpBig" >
+          <h1 class="animate__animated animate__bounce">
+        Hello <br> I'm Alime
+      </h1>
+
+      <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
+      follow certain styles,philosophies or teachers.</p>
+    
+      <span style="display: flex; align-items: baseline; padding-left: 50px;">
+      <button id="btn" > Get a Quote</button>
+
+      <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
+
+    </span>
+
       </div>
+        <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt=""></div> -->
+
+      <div class="swiper-slide">
+
+        <div class="text animate__animated animate__fadeInDownBig">
+          <h1>
+        Hello <br> I'm Alime
+      </h1>
+
+      <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
+      follow certain styles,philosophies or teachers.</p>
+    
+      <span style="display: flex; align-items: baseline; padding-left: 50px;">
+      <button id="btn" > Get a Quote</button>
+
+      <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
+
+    </span>
+
+
+
+      </div>
+        <img src="/image/slide 2.jpeg" alt=""></div>
+      
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
+
+
+  <section>
+    
+    <div>
+      <div>
+
+        <h1>We live For Passion</h1>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio neque at maiores doloribus beatae distinctio tenetur, corrupti, similique in tempora magni? Reiciendis, sapiente! Ab mollitia veniam asperiores dolore quas eius culpa voluptas repudiandae doloremque. Eius, sapiente. Aspernatur, accusantium numquam?</div>
+
+      </div>
+      <div></div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
+
 </html>
