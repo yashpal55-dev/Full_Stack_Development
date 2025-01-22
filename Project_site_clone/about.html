@@ -237,12 +237,9 @@
     .icon img {
       width: 30px;
       height: 30px;
-      /* filter: brightness(0) invert(1); */
+      
       /* transition: filter 0.3s ease; */
     }
-    /* .feature-box:hover .icon img { */
-      /* filter: brightness(0) invert(0); */
-    /* } */
     .feature-box h3 {
       font-size: 1.2rem;
       margin-bottom: 10px;
@@ -284,16 +281,17 @@
     padding: 20px;
     width: 250px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    transition: 1s;
 }
 
 .team-member:hover {
     background-color: #ff6347;
     color: #fff;
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
 }
 
 .team-member:hover h3,
@@ -302,24 +300,26 @@
 }
 
 .member-image img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .team-member h3 {
-    margin: 15px 0 5px;
-    font-size: 18px;
+    margin: 35px 0 60px;
+    font-size: 20px;
 }
 
 .team-member p {
-    color: #777;
+  margin-top: -44px;
+  margin-bottom: 55px;
+    color: #e74c3c;;
     font-size: 14px;
 }
 
 .social-icons {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .social-icons a {
@@ -327,11 +327,16 @@
     color: #333;
     margin: 0 8px;
     font-size: 18px;
-    transition: color 0.3s ease;
+    /* transition: color 0.3s ease; */
+    transition: 1s;
 }
 
 .social-icons a:hover {
     color: #fff;
+}
+.teamicons{
+  width: 20px;
+height: 20px;
 }
 
 
@@ -363,6 +368,71 @@
     text-underline-offset: 4px;
 }
 
+
+
+/* footer  */
+.footer {
+    background-color: #f9f9f9;
+    padding: 15px 30px;
+    font-family: Arial, sans-serif;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    /* transition: color 0.3s ease;   */
+}
+
+/* .footer-content a:hover { */
+    /* color: #c0392b; */
+/* } */
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right .logo {
+  /* align-items: center; */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 105px;
+    color: #333;
+}
+
+.social-icons a {
+    color: #555;
+    margin: 0 8px;
+    /* font-size: 0px; */
+    /* transition: color 0.3s ease; */
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+.heart {
+    color: #e74c3c;
+    font-size: 26px;
+}
   </style>
 </head>
 
@@ -461,21 +531,21 @@
     <div class="features">
       <div class="feature-box">
         <div class="icon">
-          <img src="/image/movie icon.png" alt="Film Icon">
+          <img src="/image/movie icon.png" alt="">
         </div>
         <h3>High Quality Images</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       <div class="feature-box">
         <div class="icon">
-          <img src="/image/icons8-pencil-100.png" alt="Pencil Icon">
+          <img src="/image/icons8-pencil-100.png" alt="">
         </div>
         <h3>Abundant Experience</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       <div class="feature-box">
         <div class="icon">
-          <img src="/image/download camera icon.png" alt="Camera Icon">
+          <img src="/image/icons8-camera-50.png" alt="">
         </div>
         <h3>Modern Equipments</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -491,58 +561,67 @@
     <div class="team-container">
         <div class="team-member">
             <div class="member-image">
-                <img src="/image/our team img1.webp" alt="Andrew Dean">
+                <img src="/image/our team img1.webp" alt="">
             </div>
             <h3>Andrew Dean</h3>
             <p>Photographer</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"> <img src="/image/icons8-facebook-24.png" alt="" class="teamicons"> </a>
+              <a href="#"><img src="/image/icons8-twitter-bird-50.png" alt="" class="teamicons"></a>
+              <a href="#"><img src="/image/icons8-linkedin-50.png" alt="" class="teamicons"></a>
+              <a href="#"><img src="/image/icons8-pinterest-a-social-media-web-and-mobile-application-company-50.png"
+alt="" class="teamicons"></a>
             </div>
         </div>
         <div class="team-member">
             <div class="member-image">
-                <img src="/image/our team img2.webp" alt="Tommy Kim">
+                <img src="/image/our team img2.webp" alt="">
             </div>
             <h3>Tommy Kim</h3>
             <p>Photographer</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"> <img src="/image/icons8-facebook-24.png" alt="" class="teamicons"> </a>
+              <a href="#"><img src="/image/icons8-twitter-bird-50.png" alt="" class="teamicons"></a>
+              <a href="#"><img src="/image/icons8-linkedin-50.png" alt="" class="teamicons"></a>
+              <a href="#"><img src="/image/icons8-pinterest-a-social-media-web-and-mobile-application-company-50.png"
+alt="" class="teamicons"></a>
             </div>
         </div>
         <div class="team-member">
             <div class="member-image">
-                <img src="/image/our team img3.webp" alt="Max McCormick">
+                <img src="/image/our team img3.webp" alt="">
             </div>
             <h3>Max McCormick</h3>
             <p>Photographer</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"> <img src="/image/icons8-facebook-24.png" alt="" class="teamicons"> </a>
+                <a href="#"><img src="/image/icons8-twitter-bird-50.png" alt="" class="teamicons"></a>
+                <a href="#"><img src="/image/icons8-linkedin-50.png" alt="" class="teamicons"></a>
+                <a href="#"><img src="/image/icons8-pinterest-a-social-media-web-and-mobile-application-company-50.png" alt="" class="teamicons"></a>
             </div>
         </div>
         <div class="team-member">
             <div class="member-image">
-                <img src="/image/our team img4.webp " alt="Robert Ward">
+                <img src="/image/our team img4.webp " alt="">
             </div>
             <h3>Robert Ward</h3>
             <p>Photographer</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"> <img src="/image/icons8-facebook-24.png" alt="" class="teamicons"> </a>
+              <a href="#"><img src="/image/icons8-twitter-bird-50.png" alt="" class="teamicons"></a>
+              <a href="#"><img src="/image/icons8-linkedin-50.png" alt="" class="teamicons"></a>
+              <a href="#"><img src="/image/icons8-pinterest-a-social-media-web-and-mobile-application-company-50.png" 
+            alt="" class="teamicons"></a>
             </div>
         </div>
     </div>
 </section>
+
+
+
+
+
+
 
 
 
@@ -559,6 +638,24 @@
 
 
 
+<section class="footer">
+  <div class="footer-content">
+      <p>
+          Copyright © 2025 All rights reserved | This template is made with 
+          <span class="heart">♥</span> by <a href="#">Colorlib</a>
+      </p>
+      <div class="footer-right">
+          <span class="logo">Alime.</span>
+          <div class="social-icons">
+            <a href="#"> <img src="/image/icons8-facebook-24.png" alt="" class="teamicons"> </a>
+            <a href="#"><img src="/image/icons8-twitter-bird-50.png" alt="" class="teamicons"></a>
+            <a href="#"><img src="/image/icons8-linkedin-50.png" alt="" class="teamicons"></a>
+            <a href="#"><img src="/image/icons8-pinterest-a-social-media-web-and-mobile-application-company-50.png" 
+          alt="" class="teamicons"></a>
+          </div>
+      </div>
+  </div>
+</section>
 
 
 
