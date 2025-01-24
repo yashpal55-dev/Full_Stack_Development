@@ -14,6 +14,12 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   
   
 
@@ -22,419 +28,7 @@
 
 </head>
   <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .text {
-      position: absolute;
-
-      left: 80px;
-      
-    
-    }
-    .text h1 {
-      font-size: 74px;
-
-      font-weight: 850;
-      background-image: red;
-      text-align: left;
-      margin-left: 20px;
-      background-image: linear-gradient(rgb(244, 143, 143), rgb(235, 226, 105));
-     color: transparent;
-     background-clip: text;
-  
-      
-    }
-    .i{
-      font-size: 20px;
-      color: #fff;
-      width: 660px;
-      text-align: left;
-    }
-
-    #btn {
-      width: 150px;
-      height: 40px;
-      background: transparent;
-      border-radius: 40px ;
-      border: 2px solid #d94949;
-      color: #fefcfc;
-      font-size: 16px;  
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: 1s;
-
-    }
-
-    #btn:hover{
-      background-color: #d94949;
    
-      /* color: #731a1a; */
-    }
-
-   
-
-.animate__animated.animate__fadeInUpBig {
-  --animate-duration: 1.5s;
-}
-
-/* This changes all the animations globally */
-:root {
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
-}
-
-
-.animate__animated.animate__fadeInDownBig {
-  --animate-duration: 1.5s;
-}
-
-/* This changes all the animations globally */
-:root {
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
-}
-
-
-
-/* we live for passion */
-.passion-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #f9f9f9;
-}
-
-.content {
-  flex: 1;
-  /* max-width: 50%; */
-}
-
-.content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-  border-bottom: 3px solid #e74c3c;
-  display: inline-block;
-}
-
-.content p {
-  margin-bottom: 20px;
-  color: #555;
-  line-height: 2;
-  width: 95%;
-}
-
-.contact-btn {
-  
-  padding: 10px 22px;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: transparent;
-  border: 2px solid #e74c3c;
-  color: #141313;
-  cursor: pointer;
-  border-radius: 40px;
-  transition: 1s;
-}
-
-.contact-btn:hover {
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-.image-container {
-  /* flex: 1; */
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-
-
-/* why choose us  */
- .why-choose-us {
-      text-align: center;
-      padding: 50px;
-      background-color: #f9f9f9;
-    }
-    .why-choose-us h1 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    .features {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    .feature-box {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 250px;
-      /* transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; */
-      transition: 1s;
-    }
-    .feature-box:hover {
-      /* transform: translateY(-10px); */
-      background-color: #f66;
-      /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); */
-    }
-    .icon {
-      background-color: #f66;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      margin: 0 auto 15px;
-      /* transition: background-color 0.3s ease; */
-      transition: 1s;
-    }
-    .feature-box:hover .icon {
-      background-color: #000;
-    }
-    .icon img {
-      width: 30px;
-      height: 30px;
-      
-      /* transition: filter 0.3s ease; */
-    }
-    .feature-box h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #444;
-      /* transition: color 0.3s ease; */
-      transition: 1s;
-    }
-    .feature-box:hover h3 {
-      color: #fff;
-    }
-    .feature-box p {
-      font-size: 0.9rem;
-      color: #666;
-      line-height: 1.5;
-      transition: color 0.3s ease;
-    }
-    .feature-box:hover p {
-      color: #ddd;
-    }
-
-
-
-    /* our team */
-    .team {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.team-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    position: relative;
-    overflow: hidden;
-    
-    transition: 1s;
-}
-
-.team-member:hover {
-    background-color: #ff6347;
-    color: #fff;
-    /* transform: translateY(-10px); */
-}
-
-.team-member:hover h3,
-.team-member:hover p {
-    color: #fff;
-}
-
-.member-image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.team-member h3 {
-    margin: 35px 0 60px;
-    font-size: 20px;
-}
-
-.team-member p {
-  margin-top: -44px;
-  margin-bottom: 55px;
-    color: #e74c3c;;
-    font-size: 14px;
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 8px;
-    font-size: 18px;
-    /* transition: color 0.3s ease; */
-    transition: 1s;
-}
-
-.social-icons a:hover {
-    color: #fff;
-}
-.teamicons{
-  width: 20px;
-height: 20px;
-}
-
-
-
-
-
-
-.follow-instagram {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
-}
-
-.follow-instagram h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.follow-instagram p {
-    font-size: 18px;
-    color: #777;
-    font-weight: lighter;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-
-
-/* footer  */
-.footer {
-    background-color: #f9f9f9;
-    padding: 15px 30px;
-    font-family: Arial, sans-serif;
-    color: #555;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #ddd;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
-
-.footer-content p {
-    font-size: 18px;
-    margin: 0;
-}
-
-.footer-content a {
-    text-decoration: none;
-    color: #e74c3c;
-    font-weight: bold;
-    /* transition: color 0.3s ease;   */
-}
-
-/* .footer-content a:hover { */
-    /* color: #c0392b; */
-/* } */
-
-.footer-right {
-    display: flex;
-    align-items: center;
-}
-
-.footer-right .logo {
-  /* align-items: center; */
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 105px;
-    color: #333;
-}
-
-.social-icons a {
-    color: #555;
-    margin: 0 8px;
-    /* font-size: 0px; */
-    /* transition: color 0.3s ease; */
-}
-
-.social-icons a:hover {
-    color: #e74c3c;
-}
-
-.heart {
-    color: #e74c3c;
-    font-size: 26px;
-}
   </style>
 </head>
 
@@ -637,6 +231,26 @@ alt="" class="teamicons"></a>
 
 
 
+<!-- asdfghjklasdfghjkl  -->
+<!-- 
+<div #swiperRef="" class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><div class="blank">lkjhgfd</div><img src="/image/alime 1.webp" alt="" class="img1"></div>
+    <div class="swiper-slide"><div class="blank">lkjhgfdsa</div><img src="/image/alime2.webp" alt="" class="img1"></div>
+    <div class="swiper-slide"><div class="blank">lkjhgfdsa</div><img src="/image/alime3.webp" alt="" class="img1"></div>
+    <div class="swiper-slide"><div class="blank">lkjhgfdsa</div><img src="/image/alime4.webp" alt="" class="img1"></div>
+    <div class="swiper-slide"><div class="blank">lkjhgfdsa</div><img src="/image/alime5.webp" alt="" class="img1"></div>
+    <div class="swiper-slide"><div class="blank">lkjhgfdsa</div><img src="/image/alime6.webp" alt="" class="img1"></div>
+  </div>
+
+</div> -->
+
+
+
+
+
+
+
 
 
 
@@ -685,6 +299,40 @@ alt="" class="teamicons"></a>
       },
     });
   </script>
+
+
+
+
+<!-- Swiper JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+<!-- Initialize Swiper -->
+<!-- <script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    centeredSlides: false,
+    loop: true,
+   scrollbhavior: 'smooth',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    spaceBetween: 0,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }, autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+
+ 
+</script> -->
 </body>
 
 </html>
