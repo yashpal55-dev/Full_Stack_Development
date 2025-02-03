@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 200%; /* Two slides, each taking up 100% */
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover full screen */
+}
+
+
+.text {
+  position: absolute;
+  left: 80px;
+  padding-top: 180px;
+  
+
+}
+.text h1 {
+  font-size: 74px;
+  font-weight: 850;
+  background-image: red;
+  text-align: left;
+  margin-left: 20px;
+  background-image: linear-gradient(rgb(244, 143, 143), rgb(235, 226, 105));
+ color: transparent;
+ background-clip: text;
+
+  
+}
+.i{
+  font-size: 20px;
+  color: #fff;
+  width: 660px;
+  text-align: left;
+}
+
+#btn {
+  width: 150px;
+  height: 40px;
+  background: transparent;
+  border-radius: 40px ;
+  border: 2px solid #d94949;
+  color: #fefcfc;
+  font-size: 16px;  
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 1s;
+
+}
+
+#btn:hover{
+  background-color: #d94949;
+
+  /* color: #731a1a; */
+}
+
+
+
+.animate__animated.animate__fadeInUpBig {
+--animate-duration: 1.5s;
+}
+
+/* This changes all the animations globally */
+:root {
+--animate-duration: 800ms;
+--animate-delay: 0.9s;
+}
+
+
+.animate__animated.animate__fadeInDownBig {
+--animate-duration: 1.5s;
+}
+
+/* This changes all the animations globally */
+:root {
+--animate-duration: 800ms;
+--animate-delay: 0.9s;
+}
+</style>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+
+                <div class="text animate__animated animate__fadeInUpBig" >
+                    <h1 class="animate__animated animate__bounce">
+                  Hello <br> I'm Alime
+                </h1>
+
+                <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
+                    follow certain styles,philosophies or teachers.</p>
+                    <span style="display: flex; align-items: baseline; padding-left: 50px;">
+                    <button id="btn" > Get a Quote</button>
+                    <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
+                    </span>
+                    </div>
+                <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">
+            </div>
+
+
+            <div class="slide">
+                
+
+                 <div class="text animate__animated animate__fadeInDownBig">
+                    
+                    <h1>  Hello <br> I'm Alime
+                </h1>
+          
+                <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
+                follow certain styles,philosophies or teachers.</p>
+              
+        <span style="display: flex; align-items: baseline; padding-left: 50px;">
+                <button id="btn" > Get a Quote</button>
+          
+                <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
+          
+              </span>
+          </div>          
+                <img src="/image/slide 2.jpeg" alt="Image 2">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        let slides = document.querySelector(".slides");
+let index = 0;
+
+function nextSlide() {
+    index = (index + 1) % 2; // Toggle between 0 and 1
+    slides.style.transform = "translateX(" + (-index * 100) + "vw)";
+}
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 2000);
+    </script>
+
+</body>
+</html>
