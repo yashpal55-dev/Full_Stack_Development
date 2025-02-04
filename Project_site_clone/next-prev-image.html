@@ -43,19 +43,22 @@ body, html {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover full screen */
+    object-fit: cover; /* Cover full screen */
 }
+
+
 
 
 .text {
   position: absolute;
+
   left: 80px;
-  padding-top: 180px;
   
 
 }
 .text h1 {
   font-size: 74px;
+
   font-weight: 850;
   background-image: red;
   text-align: left;
@@ -91,7 +94,6 @@ body, html {
 #btn:hover{
   background-color: #d94949;
 
-  /* color: #731a1a; */
 }
 
 
@@ -106,16 +108,23 @@ body, html {
 --animate-delay: 0.9s;
 }
 
-
+/* 
 .animate__animated.animate__fadeInDownBig {
 --animate-duration: 1.5s;
 }
 
-/* This changes all the animations globally */
+
 :root {
 --animate-duration: 800ms;
 --animate-delay: 0.9s;
-}
+} */
+
+
+
+
+
+
+
 </style>
 <body>
     <div class="slider">
@@ -126,42 +135,44 @@ body, html {
                     <h1 class="animate__animated animate__bounce">
                   Hello <br> I'm Alime
                 </h1>
-
-                <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
-                    follow certain styles,philosophies or teachers.</p>
-                    <span style="display: flex; align-items: baseline; padding-left: 50px;">
-                    <button id="btn" > Get a Quote</button>
-                    <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
-                    </span>
-                    </div>
-                <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">
-            </div>
-
-
-            <div class="slide">
-                
-
-                 <div class="text animate__animated animate__fadeInDownBig">
-                    
-                    <h1>  Hello <br> I'm Alime
-                </h1>
           
                 <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
                 follow certain styles,philosophies or teachers.</p>
               
-        <span style="display: flex; align-items: baseline; padding-left: 50px;">
+                <span style="display: flex; align-items: baseline; padding-left: 50px;">
                 <button id="btn" > Get a Quote</button>
           
                 <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
           
               </span>
-          </div>          
+          
+                </div>
+                <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">
+            </div>
+            <div class="slide" style="overflow: hidden;">
+
+                
+
+                <!-- <div class="text animate__animated animate__fadeInUpBig" >
+                    <h1 class="animate__animated animate__bounce">
+                  Hello <br> I'm Alime
+                </h1>
+          
+                <p class="i">I photography very instictivelgy.Isee how ito is taken like that. i do not 
+                follow certain styles,philosophies or teachers.</p>
+              
+                <span style="display: flex; align-items: baseline; padding-left: 50px;">
+                <button id="btn" > Get a Quote</button>
+          
+                <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
+          
+              </span>
+          
+            </div> -->
                 <img src="/image/slide 2.jpeg" alt="Image 2">
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 
     <script>
         let slides = document.querySelector(".slides");
@@ -173,7 +184,7 @@ function nextSlide() {
 }
 
 // Change slide every 5 seconds
-setInterval(nextSlide, 2000);
+setInterval(nextSlide, 2000);
     </script>
 
 </body>

@@ -6,68 +6,155 @@
   <title>Document</title>
 </head>
 <style>
-  /* *{
-    margin: 0px;
-    padding: 0px;
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-  html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-  .slide {
-      width: 100%;
-      height: 100%;
-     
-    }
-   
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-    }
-    
-      .imageslide{
-        display: flex;
-      justify-content: center; 
-      
-      width: 100%;
-      height: 250px;
-      overflow: hidden;
-      
-      }
-      .img1{
-        display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      } 
+}
 
-      */
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: Arial, sans-serif;
+    color: white;
+}
 
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
- </style> 
+.slides {
+    display: flex;
+    width: 300%; /* Three slides (including duplicate) */
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover full screen */
+}
+
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 40%;
+    text-align: left;
+}
+
+.text-overlay h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffcccb;
+}
+
+.text-overlay h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.text-overlay p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Button Style */
+.quote-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quote-btn:hover {
+    background: white;
+    color: black;
+}
+
+.email {
+    font-style: italic;
+    margin-top: 10px;
+}
+</style>
 <body>
-  <!-- <div #swiperRef="" class="slide">
-    <div class="imageslide">
-      <div class="swiper-slide"><img src="/image/alime 1.webp" alt="" class="img1"></div>
-      <div class="swiper-slide"><img src="/image/alime2.webp" alt="" class="img1"></div>
-      <div class="swiper-slide"><img src="/image/alime3.webp" alt="" class="img1"></div>
-      <div class="swiper-slide"><img src="/image/alime4.webp" alt="" class="img1"></div>
-      <div class="swiper-slide"><img src="/image/alime5.webp" alt="" class="img1"></div>
-      <div class="swiper-slide"><img src="/image/alime6.webp" alt="" class="img1"></div>
+  <div class="slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">
+            <div class="text-overlay">
+                <h1>Hello</h1>
+                <h2>I'm Alime</h2>
+                <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+                <button class="quote-btn">Get A Quote</button>
+                <p class="email">hello.alime@gmail.com</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/image/slide 2.jpeg" alt="Image 2">
+            <div class="text-overlay">
+                <h1>Hello</h1>
+                <h2>I'm Alime</h2>
+                <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+                <button class="quote-btn">Get A Quote</button>
+                <p class="email">hello.alime@gmail.com</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">  <!-- Duplicate for smooth loop -->
+            <div class="text-overlay">
+                <h1>Hello</h1>
+                <h2>I'm Alime</h2>
+                <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+                <button class="quote-btn">Get A Quote</button>
+                <p class="email">hello.alime@gmail.com</p>
+            </div>
+        </div>
     </div>
+</div>
 
-  </div>  -->
 
 
-  
+  <script>
+    let slides = document.querySelector(".slides");
+let index = 0;
+const totalSlides = 3; // 3 slides (including duplicate)
+
+// Function to move slides
+function nextSlide() {
+    index++;
+    slides.style.transition = "transform 1s ease-in-out";
+    slides.style.transform = `translateX(-${index * 100}vw)`;
+
+    // Reset after last image
+    if (index === totalSlides - 1) {
+        setTimeout(() => {
+            slides.style.transition = "none"; // Remove transition for instant jump
+            slides.style.transform = "translateX(0)";
+            index = 0;
+        }, 1000); // Delay to allow transition before reset
+    }
+}
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 2000);
+  </script>
 </body>
 </html>
-
-
-
-
-
-<!-- <div class="blank">lkjhgfd</div> -->
