@@ -48,7 +48,7 @@
 
       <a href="#" style="color: white; padding-left: 70px;"><p>hello.alime@gmail.com</p></a>
 
-    </span>
+    </span> 
 
       </div>
         <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt=""></div>
@@ -79,6 +79,53 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div> -->
+
+    <section>
+      <div class="slider">
+        <div class="slides">
+            <div class="slide ">
+                <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">
+                <div class="text-overlay">
+                    <h1>Hello</h1>
+                    <h2>I'm Alime</h2>
+                    <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+                    <span style="display: flex; align-items: baseline; padding-top: 30px; ">
+                    <button class="quote-btn">Get A Quote</button>
+                    <a href="#" style="color: white; padding-left: 70px;"><p class="email">hello.alime@gmail.com</p></a>
+    
+                    </span>
+                </div>
+            </div>
+            <div class="slide animate__animated animate__fadeInUpBig">
+                <img src="/image/slide 2.jpeg" alt="Image 2">
+                <div class="text-overlay">
+                    <h1>Hello</h1>
+                    <h2>I'm Alime</h2>
+                    <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+    
+                    <span style="display: flex; align-items: baseline; padding-top: 30px;">
+                    <button class="quote-btn">Get A Quote</button>
+                 <a href="#" style="color: white; padding-left: 70px;"><p class="email">hello.alime@gmail.com</p></a>
+                    </span>
+                </div>
+            </div>
+            <div class="slide animate__animated animate__fadeInUpBig">
+                <img src="/image/11062b_10d9df324a41468a91b509f4a12a33cb~mv2.avif" alt="Image 1">  <!-- Duplicate for smooth loop -->
+                <div class="text-overlay">
+                    <h1>Hello</h1>
+                    <h2>I'm Alime</h2>
+                    <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies, or teachers.</p>
+                    <span style="display: flex; align-items: baseline; padding-top: 30px; ">
+                    <button class="quote-btn">Get A Quote</button>
+                    <a href="#" style="color: white; padding-left: 70px;"><p class="email">hello.alime@gmail.com</p></a>
+    
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </section>
 
 
   
@@ -269,6 +316,32 @@ alt="" class="teamicons"></a>
   </div>
 </section>
 
+
+
+<script>
+  let slides = document.querySelector(".slides");
+let index = 0;
+const totalSlides = 3; // 3 slides (including duplicate)
+
+// Function to move slides
+function nextSlide() {
+  index++;
+  slides.style.transition = "transform 1s ease-in-out";
+  slides.style.transform = `translateX(-${index * 100}vw)`;
+
+  // Reset after last image
+  if (index === totalSlides - 1) {
+      setTimeout(() => {
+          slides.style.transition = "none"; // Remove transition for instant jump
+          slides.style.transform = "translateX(0)";
+          index = 0;
+      }, 1000); // Delay to allow transition before reset
+  }
+}
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 5000);
+</script>
 
 
 
