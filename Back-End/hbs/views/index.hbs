@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- <link rel="stylesheet" href="../css/style.css"> --}}
+    <link rel="stylesheet" href="../css/style.css">
+    <title>photoshoot</title>
+</head>
+{{!-- <style>
+    h2 {
+        color: red;
+    }
+</style> --}}
+<body>
+<header>
+    {{> header}}
+    <h1>Welcome to the Photoshoot Website</h1>
+ 
+</header>
+
+<main> 
+    <section id="intro">
+        <h2>Capture Your Moments</h2>
+        <p>We provide professional photoshoot services to capture your precious moments.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wedding Photography</li>
+            <li>Portrait Photography</li>
+            <li>Event Photography</li>
+            <li>Commercial Photography</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            {{#each photos}}
+                <div class="photo">
+                    <img src="{{this.url}}" alt="{{this.description}}">
+                    <p>{{this.description}}</p>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+</main>
+
+<footer>
+    {{> header}}
+    <p>&copy; 2023 Photoshoot Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -90,7 +90,7 @@ body {
 body, html {
   height: 100%;
   width: 100%;
-  overflow: hidden; /* Prevent scrolling */
+  /* overflow: hidden; Prevent scrolling */
   font-family: Arial, sans-serif;
   color: white;
 }
@@ -122,14 +122,14 @@ body, html {
 }
 
 /* Text Overlay */
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  max-width: 40%;
-  text-align: left;
-}
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 40%;
+    text-align: left;
+  }
 
 .text-overlay h1 {
   font-size: 80px;
