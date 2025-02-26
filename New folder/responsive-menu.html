@@ -173,9 +173,9 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li class="dropdown">
-                <a href="#">Courses ▼</a>
-                <ul class="dropdown-menu">
+            <li class="dropdown" onclick="toggleCourses()">
+                <a href="#">  Courses ▼</a>
+                <ul class="dropdown-menu" id="courseList">
                     <li><a href="#">Basic/Advance</a></li>
                     <li><a href="#">Web Development</a></li>
                     <li><a href="#">Digital Marketing</a></li>
@@ -221,6 +221,14 @@
 function closeMenu() {
     document.getElementById("menu").style.left = "-250px";
 }
+
+// button /
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".dropdown").addEventListener("click", function () {
+        var courseList = document.getElementById("courseList");
+        courseList.style.display = courseList.style.display === "block" ? "none" : "block";
+    });
+});
     </script>
 </body>
 </html>

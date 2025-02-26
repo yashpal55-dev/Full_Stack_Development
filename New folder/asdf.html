@@ -92,8 +92,8 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">
-                <a href="#">Courses <button id="button" onclick="openDropdown()">▼</button></a>
-                <ul class="dropdown-menu" id="dropdown-menu">
+                <a href="#"> Courses <button  onclick="toggleCourses()"> ▼</button></a>
+                <ul class="dropdown-menu" id="courseList">
                     <li><a href="#">Basic/Advance</a></li>
                     <li><a href="#">Web Development</a></li>
                     <li><a href="#">Digital Marketing</a></li>
@@ -113,11 +113,14 @@
 function closeMenu() {
     document.getElementById("menu").style.left = "-250px";
 }
-function openDropdown() {
-    document.getElementById("button").style.left = "0";
-}
-function closeDropdown() {
-    document.getElementById("dropdown-menu").style.display = "none";
+
+function toggleCourses() {
+    var courseList = document.getElementById("courseList");
+    if (courseList.style.display == "block") {
+        courseList.style.display = "none";
+    } else {
+        courseList.style.display = "block";
+    }   
 }
     </script>
 </body>
