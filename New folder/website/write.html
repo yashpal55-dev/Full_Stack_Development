@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Write Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3vw; /* Responsive font size */
+            font-size: 24px; /* Minimum size for mobile */
+            max-width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black; /* Typing cursor effect */
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 4vw; /* Larger font for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="auto-text"></h1>
+    <script>
+        const texts = [
+            "Expert Trainers with Industry Experience",
+            "Hands-on Practical learning",
+            "100% Placement Assistance",
+            "Affordable Fees & Flexible Timings",
+            "Certification for Career Growth"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const autoTextElement = document.getElementById("auto-text");
+
+        function typeEffect() {
+            const currentText = texts[textIndex];
+            autoTextElement.textContent = currentText.substring(0, charIndex);
+            
+            let speed = isDeleting ? 30 : 50; // Faster speed
+            if (window.innerWidth < 600) speed = isDeleting ? 20 : 40; // Increase speed on mobile
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = 900; // Wait before deleting
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                speed = 500; // Pause before next text
+            }
+            charIndex += isDeleting ? -1 : 1;
+            setTimeout(typeEffect, speed);
+        }
+
+        typeEffect();
+    </script>
+</body>
+</html>

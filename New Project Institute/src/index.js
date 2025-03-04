@@ -6,13 +6,13 @@ let app = express();
 
 app.set('view engine', 'hbs');
 let webstatic = path.join(__dirname,("../views"));
-let par = path.join(__dirname,("../views/partial"));
+let par = path.join(__dirname, "views/partial");
 
 app.use('/css',express.static(path.join(__dirname,("../css"))));
 
 app.set("views",webstatic);
 
-hbs.registerPartials(par)
+hbs.registerPartials(par);
 
 app.get("/",(req,res)=>{
     res.render("index",{
