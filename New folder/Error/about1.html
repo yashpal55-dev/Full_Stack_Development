@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - OM Institute</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding-top: 20px ;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .welcome h1 {
+            text-align: center;
+            font-size: 32px;
+            padding-bottom: 20px;
+        }
+
+        .para p {
+            font-size: 18px;
+            color: rgb(37, 35, 35);
+            width: 90%;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .us {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 30px;
+            gap: 25px;
+        }
+
+        .img img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+        }
+
+        .vision, .mission, .name {
+            padding: 0 20px;
+            max-width: 550px;
+        }
+
+        .vision h2, .mission h2, .name h2 {
+            font-size: 25px;
+            padding-top: 25px;
+            padding-bottom: 0px;
+        }
+
+        .vision p, .mission p, .name p {
+            padding-top: 10px;
+            line-height: 1.5;
+            font-size: 18px;
+            color: rgb(54, 51, 51);
+        }
+
+        @media (max-width: 768px) {
+            .para p, .vision p, .mission p, .name p {
+                width: 100%;    
+            }
+
+            .us {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .vision, .mission, .name {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <section>
+        <div class="welcome">
+            <h1><u>About Us</u></h1>
+        </div>
+
+        <div class="container">
+            <div class="para">
+                <p>
+                    OM INSTITUTE is a premier computer training center dedicated to providing high-quality education in the field of technology and digital marketing. Our mission is to bridge the gap between theoretical knowledge and practical application, equipping students with skills that make them industry-ready.<br><br>
+                    With a team of experienced trainers, state-of-the-art infrastructure, and a focus on real-world applications, we aim to deliver excellence in education. Our courses are designed to cater to students, professionals, and business owners, helping them stay ahead in the competitive digital era.
+                </p>
+            </div>
+
+            <div class="us">
+                <div class="img">
+                    <img src="/images/student_at_PC_1600px.jpg" alt="Learning Image">
+                </div>
+
+                <div>
+                    <div class="vision">
+                        <h2>Our Vision:</h2>
+                        <p>To be a leading institution in digital and technical education, fostering innovation and skill development.</p>
+                    </div>
+
+                    <div class="mission">
+                        <h2>Our Mission:</h2>
+                        <p>To provide affordable, high-quality, and practical education that enhances career prospects and business growth.</p>
+                    </div>
+
+                    <div class="name">
+                        <h2>Founder:</h2>
+                        <p>Mr. Balvinder Singh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Write Text</title>
     <style>
-        body {
+        .autowrite {
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            /* height: 100vh; */
+            /* background-color: #f4f4f4; */
             text-align: center;
-            padding: 20px;
+            padding-left: 20px;
         }
-        h1 {
+        .autowrite h1 {
             font-size: 3vw; /* Responsive font size */
-            font-size: 24px; /* Minimum size for mobile */
-            max-width: 90%;
+            font-size: 18px; /* Minimum size for mobile */
+            max-width: 80%;
+            min-height: 24px;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid black; /* Typing cursor effect */
         }
         @media (max-width: 600px) {
-            h1 {
-                font-size: 4vw; /* Larger font for small screens */
+            .autowrite h1 {
+                font-size: 4vw;
+                min-height: 30px; /* Larger font for small screens */
             }
         }
     </style>
 </head>
 <body>
+    <div>sjkdafksdfjkla</div>
+    <div class="autowrite">
     <h1 id="auto-text"></h1>
+    </div>
+    <div>sadfghj</div>
     <script>
         const texts = [
             "Expert Trainers with Industry Experience",
