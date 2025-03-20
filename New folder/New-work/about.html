@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Gradient Background */
+.img {
+    background: linear-gradient(to right, #745991, #2575fc); 
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Grid Layout for Courses */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Transparent Course Cards */
+.sec {
+    background: rgba(255, 255, 255, 0.1); /* Fully Transparent */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.sec:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Image Styling */
+.sec img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Headings */
+.sec h1 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: white;
+}
+
+/* Paragraph Styling */
+.sec p {
+    width: 90%;
+    margin: auto;
+    line-height: 1.6;
+    color: white;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.sec button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 18px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Button Hover Effect */
+.sec button:hover {
+    background-color: white;
+    color: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+</style>
+<body>
+    <div class="img">
+
+        <!-- First Row (3 Courses) -->
+        <div class="courses">
+            <div class="sec">
+                <img src="/images/digital-marketing.jpg" alt="">
+                <h1>Digital Marketing</h1>
+                <p>Digital marketing is the promotion of products or services using digital channels.  
+                   It includes SEO, social media, email marketing, and paid ads.  
+                   Businesses leverage digital marketing to reach a global audience.  
+                   It is a cost-effective and measurable way to grow a brand.  
+                   Continuous analysis helps in optimizing marketing strategies.</p>
+                <button>Enquire Now</button>
+            </div>
+    
+            <div class="sec">
+                <img src="/images/web-development.webp" alt="">
+                <h1>Web Development</h1>
+                <p>Web development involves creating and maintaining websites.  
+                   It includes front-end, back-end, and full-stack development.  
+                   Developers use HTML, CSS, JavaScript, and frameworks like React.  
+                   A well-developed website improves user experience and engagement.  
+                   Modern web development focuses on responsive and dynamic designs.</p>
+                <button>Enquire Now</button>
+            </div>
+    
+            <div class="sec">
+                <img src="/images/power-bi.jpg" alt="">
+                <h1>Power BI</h1>
+                <p>Power BI is a powerful business intelligence tool by Microsoft.  
+                   It helps in data visualization and generating insightful reports.  
+                   Users can connect data from various sources and analyze trends.  
+                   Interactive dashboards make decision-making easier and faster.  
+                   Businesses use Power BI for better data-driven strategies.</p>
+                <button>Enquire Now</button>
+            </div>
+        </div>
+    
+        <!-- Second Row (3 Courses) -->
+        <div class="courses">
+            <div class="sec">
+                <img src="/images/graphic-design.jpg" alt="">
+                <h1>Graphic Designing</h1>
+                <p>Graphic designing is the art of visual communication.  
+                   Designers use typography, images, and layouts for branding.  
+                   It is used in advertisements, logos, websites, and packaging.  
+                   Popular tools include Photoshop, Illustrator, and Canva.  
+                   Creativity and innovation play a major role in this field.</p>
+                <button>Enquire Now</button>
+            </div>
+    
+            <div class="sec">
+                <img src="/images/sql.jpg" alt="">
+                <h1>SQL</h1>
+                <p>SQL (Structured Query Language) is used to manage databases.  
+                   It allows users to store, retrieve, and manipulate data efficiently.  
+                   SQL is widely used in web development and data analytics.  
+                   Common commands include SELECT, INSERT, UPDATE, and DELETE.  
+                   It plays a crucial role in managing large-scale databases.</p>
+                <button>Enquire Now</button>
+            </div>
+    
+            <div class="sec">
+                <img src="/images/advance-excel.jpg" alt="">
+                <h1>Advance Excel</h1>
+                <p>Advanced Excel enhances data analysis and visualization.  
+                   It includes features like PivotTables, VLOOKUP, and Macros.  
+                   Businesses use Excel for financial analysis and reporting.  
+                   It improves efficiency in handling large datasets.  
+                   Mastering Excel is beneficial for many career opportunities.</p>
+                <button>Enquire Now</button>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

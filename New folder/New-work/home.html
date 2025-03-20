@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    padding-top: 55px;
+    /* justify-content: center; */
+}
+
+.welcome h1 {
+    display: flex;
+   
+    font-size:  37px;
+    padding-left: 65px;
+
+    /* height: 100vh; */
+}
+.content {
+    display: flex;
+    padding-left: 110px;
+
+    /* justify-content: center;
+    align-items: center; */
+    font-size: 19px;
+    padding-top: 10px;
+    /* height: 100vh; */
+}
+
+.image1 img{
+    width: 500px;
+    height: 400px;
+
+    
+}
+
+.autowrite {
+            font-family: Arial, sans-serif;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            /* height: 100vh; */
+            /* background-color: #f4f4f4; */
+            text-align: center;
+            padding-left: 60px;
+            padding-top: 25px;
+        }
+        .autowrite h1 {
+            font-size: 3vw; /* Responsive font size */
+            font-size: 18px; /* Minimum size for mobile */
+            max-width: 80%;
+            min-height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black; /* Typing cursor effect */
+        }
+        @media (max-width: 600px) {
+            .autowrite h1 {
+                font-size: 4vw;
+                min-height: 30px; /* Larger font for small screens */
+            }
+        }
+
+
+.at {
+    
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-left: 60px;
+   
+}
+.at p{
+    text-align: left;
+    line-height: 1.7;
+    color: #333;
+    width: 750px;
+    
+    
+}
+
+
+.join button{
+    background-color: red;
+    color: white;
+    padding: 15px 20px;
+    border: 2px solid red;
+    cursor: pointer;
+    font-size: 19px;
+    border-radius: 8px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+
+
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .container{
+    display: flex;
+    /* flex-direction: column; */
+    padding-top: 55px;
+    /* justify-content: center; */
+}
+
+.welcome h1 {
+    display: flex;
+   
+    font-size:  33px;
+    padding-left: 10px;
+
+    /* height: 100vh; */
+}
+.content {
+    display: flex;
+    padding-left: 40px;
+
+    /* justify-content: center;
+    align-items: center; */
+    font-size: 19px;
+    padding-top: 10px;
+    /* height: 100vh; */
+}
+
+.image1 img{
+    display: none;
+    width: 500px;
+    height: 400px;
+}
+
+    .at {
+    
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-left: 10px;
+   
+}
+.at p{
+    text-align: left;
+    line-height: 1.7;
+    color: #333;
+    width: 385px;
+    padding-right: 5px;
+    
+    
+}
+
+
+.join button{
+    background-color: red;
+    color: white;
+    padding: 15px 20px;
+    border: 2px solid red;
+    cursor: pointer;
+    font-size: 19px;
+    border-radius: 8px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+
+    
+
+    }
+
+
+
+
+.available{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 20px;
+    width: 90%;
+}
+
+/* Both rows will have 3 columns */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px;
+    width: 100%;
+    padding-left: 90px;
+}
+
+/* Common styles for each course section */
+.sec {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.sec img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Headings */
+.sec h1 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+/* Paragraphs */
+.sec p {
+    width: 90%;
+    margin: auto;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+/* Buttons */
+.sec button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid blue;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .courses {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .courses {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    }
+}
+
+
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .available{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    padding-top: 60px;
+}
+
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 20px;
+    width: 90%;
+    
+}
+
+/* Both rows will have 3 columns */
+.courses {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr);  */
+    gap: 20px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+/* Common styles for each course section */
+.sec {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.sec img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Headings */
+.sec h1 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+/* Paragraphs */
+.sec p {
+    width: 90%;
+    margin: auto;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+/* Buttons */
+.sec button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid blue;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    }
+
+
+
+    
+
+
+
+.why h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 15px; */
+font-size: 32px;
+padding-top: 60px;
+}
+.expert{
+    padding-top: 60px;
+}
+.expert li{
+    padding-left: 100px;
+    font-size: 22px;
+    font-weight: 700;
+    /* padding-top: 60px; */
+    padding-top: 20px;
+
+}
+.us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    padding-top: 50px;
+    font-weight: 900;
+}
+.in{
+    color: red;
+}
+
+
+
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .why h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 15px; */
+font-size: 32px;
+padding-top: 60px;
+}
+.expert{
+    padding-top: 40px;
+}
+.expert li{
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    /* padding-top: 60px; */
+    padding-top: 20px;
+
+}
+.us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    padding-top: 50px;
+    font-weight: 900;
+}
+.in{
+    color: red;
+}
+
+}
+
+
+</style>
+<body>
+    <section> 
+       <div class="container">
+        <div> 
+        <div class="welcome">
+            <h1>Welcome to OM Institute</h1>
+        </div>
+
+        <div class="content">
+                Your Gateway to Digital Excellence
+            </div>
+
+
+            <div class="autowrite">
+                <h1 id="auto-text"></h1>
+                </div>
+        
+
+        <div class="at">
+            <p>At OM INSTITUTE, we empower individuals with the latest technology-driven skills to build 
+                successful careers in the digital world. Whether you are a beginner or a professional
+                be looking to 
+                upgrade your skills, our expert-led courses provide practical training and industry-relevant 
+                knowledge to help you succeed.</p>
+        </div>
+
+        <div class="join">
+            <button>Admission</button>
+        </div>
+
+
+    </div>
+
+        <div class="image1">
+            <img src="/images/WhatsApp Image 2025-03-18 at 17.20.11_f3cc1579.jpg" alt="">
+
+        </div>
+
+
+       
+    </div>
+
+    </section>
+
+    <section>
+
+        <div class="available">
+            <h1>Available Courses</h1>
+        </div>
+
+        <div class="img">
+
+            <!-- First Row (3 Courses) -->
+            <div class="courses">
+                <div class="sec">
+                    <img src="/images/digital marketing.jpg" alt="">
+                    <h1>Digital Marketing</h1>
+                    <p>Digital marketing is the promotion of products or services using digital channels.  
+                       It includes SEO, social media, email marketing, and paid ads.  
+                       Businesses leverage digital marketing to reach a global audience.  
+                       It is a cost-effective and measurable way to grow a brand.  
+                       Continuous analysis helps in optimizing marketing strategies.</p>
+                    <button>Enquire Now</button>
+                </div>
+        
+                <div class="sec">
+                    <img src="/images/WEB DEVELOPMENT.webp" alt="">
+                    <h1>Web Development</h1>
+                    <p>Web development involves creating and maintaining websites.  
+                       It includes front-end, back-end, and full-stack development.  
+                       Developers use HTML, CSS, JavaScript, and frameworks like React.  
+                       A well-developed website improves user experience and engagement.  
+                       Modern web development focuses on responsive and dynamic designs.</p>
+                    <button>Enquire Now</button>
+                </div>
+        
+                <div class="sec">
+                    <img src="/images/power bi.jpg" alt="">
+                    <h1>Power BI</h1>
+                    <p>Power BI is a powerful business intelligence tool by Microsoft.  
+                       It helps in data visualization and generating insightful reports.  
+                       Users can connect data from various sources and analyze trends.  
+                       Interactive dashboards make decision-making easier and faster.  
+                       Businesses use Power BI for better data-driven strategies.</p>
+                    <button>Enquire Now</button>
+                </div>
+            </div>
+        
+            <!-- Second Row (3 Courses) -->
+            <div class="courses">
+                <div class="sec">
+                    <img src="/images/graphic-design-.jpg" alt="">
+                    <h1>Graphic Designing</h1>
+                    <p>Graphic designing is the art of visual communication.  
+                       Designers use typography, images, and layouts for branding.  
+                       It is used in advertisements, logos, websites, and packaging.  
+                       Popular tools include Photoshop, Illustrator, and Canva.  
+                       Creativity and innovation play a major role in this field.</p>
+                    <button>Enquire Now</button>
+                </div>
+        
+                <div class="sec">
+                    <img src="/images/sql.jpg" alt="">
+                    <h1>SQL</h1>
+                    <p>SQL (Structured Query Language) is used to manage databases.  
+                       It allows users to store, retrieve, and manipulate data efficiently.  
+                       SQL is widely used in web development and data analytics.  
+                       Common commands include SELECT, INSERT, UPDATE, and DELETE.  
+                       It plays a crucial role in managing large-scale databases.</p>
+                    <button>Enquire Now</button>
+                </div>
+        
+                <div class="sec">
+                    <img src="/images/ADVANCE EXCEL.jpg" alt="">
+                    <h1>Advance Excel</h1>
+                    <p>Advanced Excel enhances data analysis and visualization.  
+                       It includes features like PivotTables, VLOOKUP, and Macros.  
+                       Businesses use Excel for financial analysis and reporting.  
+                       It improves efficiency in handling large datasets.  
+                       Mastering Excel is beneficial for many career opportunities.</p>
+                    <button>Enquire Now</button>
+                </div>
+            </div>
+        
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="why">
+          
+         <h1> Why Choose Om Institute </h1>
+        </div>
+        
+        <div class="expert">
+          <li>Expert Trainers with Industry Experience</li>
+       <li>Hands-on Practical Learning</li>
+        <li>100% Placement Assistance</li>   
+        <li>Affordable Fees & Flexible Timings</li>   
+        <li>Certification for Career Growth</li> 
+       
+      
+        </div>
+
+
+        <div class="us">
+            <span class="in">Join us today </span>  and step into the futute of technology with confidence!
+        </div>
+        
+      </section>
+      </body>
+      
+
+
+
+
+
+    <script>
+         
+            const texts = [
+            
+            "Expert Trainers with Industry Experience.",
+            "Hands-on Practical learning.",
+            "100% Placement Assistance.",
+            "Affordable Fees & Flexible Timings.",
+            "Certification for Career Growth."
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const autoTextElement = document.getElementById("auto-text");
+
+        function typeEffect() {
+            const currentText = texts[textIndex];
+            autoTextElement.textContent = currentText.substring(0, charIndex);
+            
+            let speed = isDeleting ? 30 : 50; // Faster speed
+            if (window.innerWidth < 600) speed = isDeleting ? 20 : 40; // Increase speed on mobile
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = 900; // Wait before deleting
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                speed = 500; // Pause before next text
+            }
+            charIndex += isDeleting ? -1 : 1;
+            setTimeout(typeEffect, speed);
+        }
+
+        typeEffect();
+   </script>
+    
+ 
+
+</body>
+</html>
