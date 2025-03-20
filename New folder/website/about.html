@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <style>
     *{
@@ -14,14 +15,15 @@
     background-color: #f4f4f4;
 }
 .container{
-    /* display: flex; */
+    display: flex;
     padding-top: 50px;
 }
 .welcome h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:  32px;
+    font-size:  39px;
+    font-weight: 900;
 }
 .highlight{
     color: #1e3a8a;
@@ -31,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(37, 35, 35);
     
     /* padding-top: 10px; */
@@ -39,7 +41,8 @@
     /* padding-right: 50px; */
 }
 .para p {
-    width: 89%;
+    width: 80%;
+    line-height: 1.7;
 }
 
 .us {
@@ -95,6 +98,173 @@
     color: rgb(54, 51, 51);
 }
 
+
+
+
+.available{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 20px;
+    width: 90%;
+}
+/* Both rows will have 3 columns */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+/* Common styles for each course section */
+.sec {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.sec img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Headings */
+.sec h1 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+/* Paragraphs */
+.sec p {
+    width: 90%;
+    margin: auto;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+/* Buttons */
+.sec button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid blue;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .courses {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .courses {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    }
+}
+
+
+
+@media screen and (min-width:180px) and (max-width:600px) {
+    .available{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    padding-top: 60px;
+}
+
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 20px;
+    width: 90%;
+    
+}
+
+/* Both rows will have 3 columns */
+.courses {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr);  */
+    gap: 20px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+/* Common styles for each course section */
+.sec {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.sec img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Headings */
+.sec h1 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+/* Paragraphs */
+.sec p {
+    width: 90%;
+    margin: auto;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+/* Buttons */
+.sec button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid blue;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    }
  
 
 
@@ -111,6 +281,9 @@
                 <h1><u>About-Us</u></h1>
             </div>
             <div class="container">
+
+                <div class="img"><img src="/images/student_at_PC_1600px.jpg" alt=""></div>
+
                 <div class="para">
                   <p> <span class="highlight"> OM INSTITUTE </span> is a premier computer training center dedicated to providing high-quality 
     education in the field of technology and digital marketing. Our mission is to bridge the gap 
@@ -122,10 +295,13 @@
     era.    </p>
                 </div>
 
-                <div class="us">
-                <div class="img"><img src="/images/student_at_PC_1600px.jpg" alt=""></div>
 
-                <div class="vision">
+            </div>
+
+                <div class="us">
+                
+
+                <!-- <div class="vision">
                     <h2>Our Vision:</h2>
                     <p>To be a leading institution in digital and technical education, fostering innovation and 
                         skill development.</p>
@@ -141,11 +317,66 @@
                            <p> Mr. Balvinder Singh </p>
                         </div>
                 </div>
-            </div>
+            </div> -->
 
 
             </div>
         </section>
+
+
+
+
+        <section>
+
+            <div class="available">
+                <h1>Our Vision</h1>
+            </div>
+    
+            <div class="img">
+    
+                <!-- First Row (3 Courses) -->
+                <div class="courses">
+                    <div class="sec">
+                        <img src="/images/digital marketing.jpg" alt="">
+                        <h1>Digital Marketing</h1>
+                        <p>Digital marketing is the promotion of products or services using digital channels.  
+                           It includes SEO, social media, email marketing, and paid ads.  
+                           Businesses leverage digital marketing to reach a global audience.  
+                           It is a cost-effective and measurable way to grow a brand.  
+                           Continuous analysis helps in optimizing marketing strategies.</p>
+                        <button>Enquire Now</button>
+                    </div>
+            
+                    <div class="sec">
+                        <img src="/images/WEB DEVELOPMENT.webp" alt="">
+                        <h1>Web Development</h1>
+                        <p>Web development involves creating and maintaining websites.  
+                           It includes front-end, back-end, and full-stack development.  
+                           Developers use HTML, CSS, JavaScript, and frameworks like React.  
+                           A well-developed website improves user experience and engagement.  
+                           Modern web development focuses on responsive and dynamic designs.</p>
+                        <button>Enquire Now</button>
+                    </div>
+            
+                    <div class="sec">
+                        <img src="/images/power bi.jpg" alt="">
+                        <h1>Power BI</h1>
+                        <p>Power BI is a powerful business intelligence tool by Microsoft.  
+                           It helps in data visualization and generating insightful reports.  
+                           Users can connect data from various sources and analyze trends.  
+                           Interactive dashboards make decision-making easier and faster.  
+                           Businesses use Power BI for better data-driven strategies.</p>
+                        <button>Enquire Now</button>
+                    </div>
+                </div>
+            
+                <!-- Second Row (3 Courses) -->
+                
+            </div>
+    
+        </section>
+    
+    
     </main>
     
 </body>
