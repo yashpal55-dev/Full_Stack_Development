@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    body{
+        /* background: url('') no repeat;  */
+
+    }
+    .registration{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+    }
+    .registration h1{
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 15px 0 ;
+    }
+    .registration input{
+        font-size: 16px;
+        padding: 15px 10px;
+        width: 100%;
+        /* border: 0; */
+        border-radius: 5px;
+        /* outline: none; */
+    }
+    .registration button{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px 0;
+        padding: 10px 15px;
+        width: 50%;
+        /* border: 0; */
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .registration p{
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    #count{
+        font-size: 16px;
+ padding: 15px 10px;
+ width: 100%;
+ border-radius: 5px;
+    }
+</style>
+<body>
+    <div class="registration">
+        <h1>Form</h1>
+        <form action="#">
+            <p>Full Name</p>
+            <input type="text" name="fullname" placeholder="Full Name" id="">
+            <p>Select Course</p>
+            <select name="Course" id="count">
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Advance Excel">Advance Excel</option>
+                <option value="Power Bi">Power Bi</option>
+                <option value="Graphic Designing">Graphic Designing</option>
+                <option value="SQL">SQL</option>
+              </select>
+            <p>Email</p>
+            <input type="text" name="email" placeholder="Email" id="">
+            <p>DOB</p>
+            <input type="date" name="date" id="">
+
+            <button type="submit">Submit</button>
+
+
+      
+      
+      
+      
+      
+
+        </form>
+    </div>
+</body>
+</html>
