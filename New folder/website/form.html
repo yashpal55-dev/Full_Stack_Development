@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="/website/form.js">
 <style>
     *{
         margin: 0%;
@@ -62,7 +63,7 @@
         <h1>Form</h1>
         <form action="#">
             <p>Full Name</p>
-            <input type="text" name="fullname" placeholder="Full Name" id="">
+            <input type="text" name="fullname" placeholder="Full Name" id="" required>
             <p>Select Course</p>
             <select name="Course" id="count">
                 <option value="Digital Marketing">Digital Marketing</option>
@@ -73,11 +74,15 @@
                 <option value="SQL">SQL</option>
               </select>
             <p>Email</p>
-            <input type="text" name="email" placeholder="Email" id="">
+            <input type="text" name="email" placeholder="Email" id="" required>
             <p>DOB</p>
-            <input type="date" name="date" id="">
+            <input type="date" name="date" id="" required>
 
             <button type="submit">Submit</button>
+
+            <script src="https://smtpjs.com/v3/smtp.js">
+            </script>
+            <script src="Contact form to email.js"></script>
 
 
       
