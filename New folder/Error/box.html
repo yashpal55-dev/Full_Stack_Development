@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Glowing Squares</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .square-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+        }
+        .square {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid;
+            animation: float 5s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="square-container">
+        <div class="square" style="top: 20%; left: 10%; border-color: red;"></div>
+        <div class="square" style="top: 40%; left: 30%; border-color: blue;"></div>
+        <div class="square" style="top: 60%; left: 50%; border-color: green;"></div>
+        <div class="square" style="top: 80%; left: 70%; border-color: yellow;"></div>
+        <div class="square" style="top: 30%; left: 90%; border-color: pink;"></div>
+    </div>
+</body>
+</html>
