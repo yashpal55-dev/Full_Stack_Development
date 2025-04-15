@@ -16,28 +16,20 @@
 
 .container{
     display: flex;
-    /* flex-direction: column; */
     padding-top: 55px;
-    /* justify-content: center; */
+
 }
 
 .welcome h1 {
     display: flex;
-   
     font-size:  37px;
     padding-left: 65px;
-
-    /* height: 100vh; */
 }
 .content {
     display: flex;
     padding-left: 110px;
-
-    /* justify-content: center;
-    align-items: center; */
     font-size: 19px;
     padding-top: 10px;
-    /* height: 100vh; */
 }
 
 .image1 img{
@@ -52,8 +44,6 @@
             display: flex;
             /* justify-content: center; */
             align-items: center;
-            /* height: 100vh; */
-            /* background-color: #f4f4f4; */
             text-align: center;
             padding-left: 60px;
             padding-top: 25px;
@@ -76,12 +66,10 @@
 
 
 .at {
-    
     font-size: 18px;
     font-weight: 600;
     padding-top: 15px;
     padding-left: 60px;
-   
 }
 .at p{
     text-align: left;
@@ -94,8 +82,8 @@
 
 
 .join button{
-    background-color: red;
-    color: white;
+    background-color: white;
+    color: red;
     padding: 15px 20px;
     border: 2px solid red;
     cursor: pointer;
@@ -103,6 +91,15 @@
     border-radius: 8px;
     margin-left: 60px;
     margin-top: 20px;
+    /* transition: 2s; */
+    font-weight: 540;
+
+}
+.join button:hover{
+    background-color: rgb(247, 97, 97);
+    color: white;
+    border: 2px solid red;
+    transition: 1s;
 }
 
 
@@ -212,10 +209,18 @@
     /* background-color: #d1cece; */
 
     background-color: #f1eded;
+
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 1s;
+    
 }
+.sec:hover{
+    scale: 1.05;
+    /* background-color: #d1cece; */
+    transition: 1s;
+}   
 
 /* Image styling */
 .sec img {
@@ -229,9 +234,7 @@
 .sec h1 {
     /* background-color: #d1cece; */
     background-color: #f1eded;
-    
     /* background-color: #d1cece; */
-
     margin-top: 15px;
     font-size: 22px;
 }
@@ -254,13 +257,26 @@
     padding: 10px 15px;
     border: 2px solid blue;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 555;
     border-radius: 8px;
     margin-top: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+/* .sec button:hover{
+    background-color: rgb(247, 97, 97);
+    color: white;
+    border: 2px solid red;
+    transition: 1s;
+} */
+/* .sec button:active{
+    background-color: rgb(247, 97, 97);
+    color: white;
+    border: 2px solid red;
+    transition: 1s;
+} */
 
  
 
