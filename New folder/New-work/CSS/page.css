@@ -29,7 +29,7 @@ justify-items: center;
 width: 150px;
 /* justify-content: center; */
  /* text-align: center;     */
- padding: 50px;
+ padding: 0px;
  padding-top: 20px;
  z-index: 999;
 }
@@ -73,6 +73,32 @@ width: 150px;
     background-color: #a00;
     transform: translateY(2px);
 }
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .box {
+        padding: 20px;
+    }
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .register button {
+        font-size: 14px;
+    }
+    
+}
+
 .enroll{
     color: red;
 }
