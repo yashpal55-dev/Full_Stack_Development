@@ -29,7 +29,7 @@ justify-items: center;
 width: 150px;
 /* justify-content: center; */
  /* text-align: center;     */
- padding: 0px;
+ padding: 50px;
  padding-top: 20px;
  z-index: 999;
 }
@@ -98,6 +98,7 @@ width: 150px;
     }
     
 }
+
 
 .enroll{
     color: red;

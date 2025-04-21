@@ -56,31 +56,39 @@
 }
 
 
-@media (max-width: 768px) {
-    .container{
+
+    @media (max-width: 768px) {
+    .container {
         flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
-     .location {
-         padding-left: 10px;
-         padding-right: 10px;
-     }
-     .map iframe {
-         height: 300px;
-         width: 390px;
-     }
-     .contact h1 {
-         font-size: 28px;
-     }
-     .address h2 {
-         font-size: 20px;
-     }
-     .address p {
-         font-size: 16px;
-     }
-     .visit h2 {
-         font-size: 18px;
-     }
- }
+    .location {
+        padding: 20px;
+        text-align: center;
+    }
+    .map iframe {
+        flex-wrap: wrap;
+        height: 250px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .contact h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .address h2 {
+        font-size: 18px;
+    }
+    .address p {
+        font-size: 16px;
+    }
+    .visit h2 {
+        font-size: 18px;
+        text-align: center;
+        padding: 20px;
+    }
+}
 
 </style>
 <body>
@@ -107,7 +115,7 @@
                         <p> <a href="#">ominstitute@gamil.com </a></p>
 
                         <h2>Website:</h2>
-                        <p> <a href="#"> ominstitute.org </a></p>
+                        <p> <a href="#"> ominstitute.tech </a></p>
                         
                         
                         <h2>Phone:</h2>
