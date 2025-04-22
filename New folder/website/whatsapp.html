@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Chat Widget</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #whatsapp-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    #chat-bubble {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    #chat-bubble img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    #chat-box {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background: #1c1c1c;
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .chat-header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .chat-body {
+       position: fixed;
+       bottom: 80px;
+       right: 20px;
+        padding: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        z-index: 998;
+    }
+
+    .whatsapp-btn {
+      display: block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="whatsapp-widget">
+    <div id="chat-bubble" onclick="toggleChat()">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="whatsapp icon" />
+      <span>Chat with us</span>
+    </div>
+
+    <div id="chat-box">
+      <div class="chat-header">
+        Craw Cyber Security
+        <button onclick="toggleChat()">×</button>
+      </div>
+      <div class="chat-body">
+        Hi,<br>How can I help you?
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-btn">Send WhatsApp Message</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatBubble = document.getElementById("chat-bubble");
+      const chatBox = document.getElementById("chat-box");
+
+      if (chatBox.style.display === "none" || chatBox.style.display === "") {
+        chatBox.style.display = "flex";
+        chatBubble.style.display = "none";
+      } else {
+        chatBox.style.display = "none";
+        chatBubble.style.display = "flex";
+      }
+    }
+  </script>
+</body>
+</html>
