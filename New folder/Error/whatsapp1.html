@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Chat Widget</title>
+  <style>
+    #whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+    }
+
+    #whatsapp-button img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    #chat-box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      display: none;
+      font-family: Arial, sans-serif;
+    }
+
+    #chat-header {
+      background-color: #075E54;
+      color: white;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    #chat-body {
+      padding: 10px;
+      color: #333;
+    }
+
+    #chat-footer {
+      padding: 10px;
+      text-align: center;
+    }
+
+    #chat-footer button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="whatsapp-button" onclick="toggleChat()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  Chat with us
+</div>
+
+<div id="chat-box">
+  <div id="chat-header">
+    <strong>Craw Cyber Security</strong><br>
+    <small>Online</small>
+  </div>
+  <div id="chat-body">
+    Hi,<br>
+    How can I help you?
+  </div>
+  <div id="chat-footer">
+    <button onclick="window.open('https:wa.me/919999999999', '_blank')">Send WhatsApp Message</button>
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    var chatBox = document.getElementById("chat-box");
+    if (chatBox.style.display === "none" || chatBox.style.display === "") {
+      chatBox.style.display = "block";
+    } else {
+      chatBox.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
