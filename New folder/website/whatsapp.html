@@ -1,123 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WhatsApp Chat Widget</title>
+  <meta charset="UTF-8">
+  <title>Chat with Us - WhatsApp</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    #whatsapp-widget {
+    #whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
-    }
-
-    #chat-bubble {
       background-color: #25D366;
       color: white;
-      padding: 10px 15px;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-    }
-
-    #chat-bubble img {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-
-    #chat-box {
-      width: 300px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      overflow: hidden;
-      display: none;
-      flex-direction: column;
-    }
-
-    .chat-header {
-      background: #1c1c1c;
-      color: white;
-      padding: 10px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-    }
-
-    .chat-header button {
-      background: none;
-      border: none;
-      color: white;
+      border-radius: 25px;
+      padding: 10px 20px;
       font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       cursor: pointer;
+      z-index: 999;
     }
 
-    .chat-body {
-       position: fixed;
-       bottom: 80px;
-       right: 20px;
-        padding: 10px;
-        width: 300px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        z-index: 998;
+    #whatsapp-button img {
+      width: 30px;
     }
 
-    .whatsapp-btn {
+    #popup {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: white;
+      border-radius: 15px;
+      padding: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 998;
+    }
+
+    #popup img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    #popup p {
+      margin: 10px 0;
+    }
+
+    #popup a {
       display: block;
-      margin-top: 10px;
-      background-color: #25D366;
+      text-align: center;
+      background: #25D366;
       color: white;
       padding: 10px;
-      text-align: center;
       text-decoration: none;
-      border-radius: 20px;
+      border-radius: 10px;
       font-weight: bold;
     }
+
+
+    .popup-header {
+  /* background: #1c1c1c; */
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.popup-header button {
+  
+  background: none;
+  border: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+}
+#show {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+}
   </style>
 </head>
 <body>
-  <div id="whatsapp-widget">
-    <div id="chat-bubble" onclick="toggleChat()">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="whatsapp icon" />
-      <span>Chat with us</span>
-    </div>
 
-    <div id="chat-box">
-      <div class="chat-header">
-        Craw Cyber Security
-        <button onclick="toggleChat()">×</button>
-      </div>
-      <div class="chat-body">
-        Hi,<br>How can I help you?
-        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-btn">Send WhatsApp Message</a>
-      </div>
-    </div>
+<!-- WhatsApp Button -->
+<div id="whatsapp-button" onclick="close() ">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" id="hide">
+  Chat with us
+  <div id="show">
+    
+    <img src="/images/whatsapp-icon.png" alt="">
   </div>
+</div>
 
-  <script>
-    function toggleChat() {
-      const chatBubble = document.getElementById("chat-bubble");
-      const chatBox = document.getElementById("chat-box");
+<!-- Popup Box -->
+<div id="popup">
+  <div class="popup-header">
+    OM Institute
+    <button onclick="closePopup()">&#10006;</button>
+  </div>
+  <img src="/images/WhatsApp Image.jpg" alt="Support Image" />
+  <p>Hi, how can I help you?</p>
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20help" target="_blank">Send WhatsApp Message</a>
+</div>
 
-      if (chatBox.style.display === "none" || chatBox.style.display === "") {
-        chatBox.style.display = "flex";
-        chatBubble.style.display = "none";
-      } else {
-        chatBox.style.display = "none";
-        chatBubble.style.display = "flex";
-      }
-    }
-  </script>
+<script>
+  const button = document.getElementById('whatsapp-button');
+  const popup = document.getElementById('popup');
+
+  button.onclick = () => {
+    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+  };
+
+  function closePopup() {
+  popup.style.display = 'none';
+  button.style.display = 'flex';
+}
+
+
+
+  hide.onclick = () => {
+    show.style.display = 'block';
+    hide.style.display = 'none';
+  };
+  show.onclick = () => {
+    hide.style.display = 'block';
+    show.style.display = 'none';
+  };
+
+
+
+
+
+</script>
+
 </body>
 </html>
