@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+        }
+
+        #whatsapp-button img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div id="whatsapp-button" onclick="toggleChat()" onclick="dark()" id="darkmode" style="display: none;"> -->
+        <!-- <img src="/images/whatsapp-icon.png" alt="WhatsApp"> -->
+        <!-- Chat with us -->
+      <!-- </div> -->
+
+    <!-- <div id="whatsapp-button" onclick="toggleChat()" onclick="light()" id="lightmode"> -->
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> -->
+        <!-- Chat with us -->
+      <!-- </div> -->
+             <div >
+    <button onclick="dark()" id="darkmode" style="display: none;"> <img src="/images/whatsapp-icon.png" alt=""></button>
+
+    <button onclick="light()" id="lightmode"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt=""> Chat with Us</button>
+     </div>
+    <script>
+function dark(){
+
+       document.getElementById("lightmode").setAttribute("style","display: block;");
+    document.getElementById("darkmode").setAttribute("style","display: none;");
+}
+
+function light(){
+    
+
+    document.getElementById("lightmode").setAttribute("style","display: block;");
+
+    document.getElementById("darkmode").setAttribute("style","display: block;");
+    document.getElementById("lightmode").setAttribute("style","display: none;");
+
+
+}
+</script>
+
+</body>
+</html>

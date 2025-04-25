@@ -66,10 +66,18 @@
 </head>
 <body>
 
-<div id="whatsapp-button" onclick="toggleChat()">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  Chat with us
-</div>
+
+  <div id="whatsapp-button" onclick="toggleChat()">
+
+    <button  onclick="dark()" id="darkmode" style="display: none;"> <img src="/images/whatsapp-icon.png" alt=""></button>
+
+    <button style="background-color: #25D366;" onclick="light()" id="lightmode"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+   alt=""> Chat with Us</button>
+     </div>
+<!-- <div id="whatsapp-button" onclick="toggleChat()"> -->
+  <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> -->
+  <!-- Chat with us -->
+<!-- </div> -->
 
 <div id="chat-box">
   <div id="chat-header">
@@ -94,6 +102,24 @@
       chatBox.style.display = "none";
     }
   }
+
+
+  function dark(){
+
+document.getElementById("lightmode").setAttribute("style","display: block;");
+document.getElementById("darkmode").setAttribute("style","display: none;");
+}
+
+function light(){
+
+
+document.getElementById("lightmode").setAttribute("style","display: block;");
+
+document.getElementById("darkmode").setAttribute("style","display: block;");
+document.getElementById("lightmode").setAttribute("style","display: none;");
+
+
+}
 </script>
 
 </body>

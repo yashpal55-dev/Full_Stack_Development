@@ -4,27 +4,45 @@
   <meta charset="UTF-8">
   <title>Chat with Us - WhatsApp</title>
   <style>
-    #whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 25px;
-      padding: 10px 20px;
-      font-size: 18px;
-      font-weight: bold;
+    #lightmode{
       display: flex;
+      border: none;
+      justify-content: center;
       align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      z-index: 999;
-    }
+      font-size: 16px;
+      font-weight: bold;
 
-    #whatsapp-button img {
-      width: 30px;
     }
+    #darkmode{
+      display: flex;
+      border: none;
+      justify-content: center;
+      align-items: center;
+    }
+    #whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+}
+
+#whatsapp-button img {
+  width: 30px;
+  height: 29px;
+  /* margin-right: 10px; */
+}
 
     #popup {
       position: fixed;
@@ -82,19 +100,29 @@
   position: fixed;
   bottom: 20px;
 }
+.what img {
+  width: 50px;
+  height: 40px;
+}
   </style>
 </head>
 <body>
 
 <!-- WhatsApp Button -->
-<div id="whatsapp-button" onclick="close() ">
+
+<div id="whatsapp-button" onclick="toggleChat()">
+
+  <button  onclick="dark()" id="darkmode" style="display: none;"> <img src="/images/whatsapp-icon.png" alt="" class="what"></button>
+
+  <button style="background-color: #25D366;" onclick="light()" id="lightmode"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+ alt=""> Chat with Us</button>
+   </div>
+<!-- <div id="whatsapp-button" onclick="close() ">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" id="hide">
   Chat with us
-  <div id="show">
-    
-    <img src="/images/whatsapp-icon.png" alt="">
-  </div>
-</div>
+ 
+</div> 
+-->
 
 <!-- Popup Box -->
 <div id="popup">
@@ -104,15 +132,22 @@
   </div>
   <img src="/images/WhatsApp Image.jpg" alt="Support Image" />
   <p>Hi, how can I help you?</p>
-  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20help" target="_blank">Send WhatsApp Message</a>
+  <a href="https://wa.me/919991157305?text=Hi%2C%20I%20need%20help" target="_blank">Send WhatsApp Message</a>
 </div>
 
 <script>
   const button = document.getElementById('whatsapp-button');
   const popup = document.getElementById('popup');
 
+  let isFirstClick = true;
+
   button.onclick = () => {
-    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    if (isFirstClick) {
+      popup.style.display = 'block';
+      isFirstClick = false;
+    } else {
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
   };
 
   function closePopup() {
@@ -121,16 +156,22 @@
 }
 
 
+function dark(){
 
-  hide.onclick = () => {
-    show.style.display = 'block';
-    hide.style.display = 'none';
-  };
-  show.onclick = () => {
-    hide.style.display = 'block';
-    show.style.display = 'none';
-  };
+document.getElementById("lightmode").setAttribute("style","display: flex ; border: none; justify-content: center; align-items: center; background-color: transparent;");
+document.getElementById("darkmode").setAttribute("style","display: none;");
+}
 
+function light(){
+
+
+document.getElementById("lightmode").setAttribute("style","display: block;");
+
+document.getElementById("darkmode").setAttribute("style","display: block ; border: none; justify-content: center; align-items: center; background-color: transparent;");
+document.getElementById("lightmode").setAttribute("style","display: none;");
+
+
+}
 
 
 

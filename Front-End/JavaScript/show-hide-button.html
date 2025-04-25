@@ -1,7 +1,16 @@
-<button onclick="dark()" id="darkmode" style="display: none;"> Show</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+             
+    <button onclick="dark()" id="darkmode" style="display: none;"> <img src="/dice1.jpg" alt=""></button>
+    <button onclick="light()" id="lightmode"><img src="/dice2.jpg" alt=""></button>
 
-<button onclick="light()" id="lightmode">hide</button>
-
+<script>
 function dark(){
 
        document.getElementById("lightmode").setAttribute("style","display: block;");
@@ -18,3 +27,7 @@ function light(){
 
 
 }
+</script>
+
+</body>
+</html>
