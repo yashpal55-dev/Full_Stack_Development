@@ -2,70 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chat with Us - WhatsApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    #lightmode{
+    * {
+      box-sizing: border-box;
+    }
+  
+    #lightmode, #darkmode {
       display: flex;
       border: none;
       justify-content: center;
       align-items: center;
       font-size: 16px;
       font-weight: bold;
-
+      background-color: transparent;
     }
-    #darkmode{
-      display: flex;
-      border: none;
-      justify-content: center;
-      align-items: center;
-    }
+  
     #whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  border: none;
-  color: white;
-  border-radius: 25px;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  z-index: 999;
-}
-
-#whatsapp-button img {
-  width: 30px;
-  height: 29px;
-  /* margin-right: 10px; */
-}
-
-    #popup {
       position: fixed;
-      bottom: 80px;
+      bottom: 20px;
       right: 20px;
-      background: white;
-      border-radius: 15px;
-      padding: 10px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      display: none;
-      z-index: 998;
+      background-color: #25D366;
+      border: none;
+      color: white;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 999;
     }
-
+  
+    #whatsapp-button img {
+      width: 26px;
+      height: 26px;
+    }
+    #popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  width: 90vw;
+  max-width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 998;
+}
+  
     #popup img {
       width: 100%;
       border-radius: 10px;
+      margin-top: 10px;
     }
-
+  
     #popup p {
       margin: 10px 0;
+      font-size: 14px;
+      color: #333;
     }
-
+  
     #popup a {
       display: block;
       text-align: center;
@@ -75,35 +77,54 @@
       text-decoration: none;
       border-radius: 10px;
       font-weight: bold;
+      margin-top: 10px;
     }
-
-
-    .popup-header {
-  /* background: #1c1c1c; */
-  color: white;
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
-.popup-header button {
   
-  background: none;
-  border: none;
-  color: black;
-  font-size: 18px;
-  cursor: pointer;
-}
-#show {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-}
-.what img {
-  width: 50px;
-  height: 40px;
-}
+    .popup-header {
+      color: black;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+    .popup-header button {
+      background: none;
+      border: none;
+      color: black;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  
+    .what img {
+      width: 50px;
+      height: 40px;
+    }
+  
+    @media screen and (max-width: 480px) {
+      #whatsapp-button {
+        font-size: 16px;
+        padding: 8px 16px;
+        right: 10px;
+        bottom: 10px;
+      }
+  
+      #popup {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+      }
+  
+      #popup p {
+        font-size: 13px;
+      }
+  
+      .popup-header {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
