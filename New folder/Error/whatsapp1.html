@@ -2,111 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WhatsApp Chat Widget</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    #lightmode, #darkmode {
+      display: flex;
+      border: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: transparent;
+    }
+  
     #whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #25D366;
+      border: none;
       color: white;
+      border-radius: 25px;
       padding: 10px 20px;
-      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
       display: flex;
       align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      font-family: Arial, sans-serif;
+      z-index: 999;
     }
-
+  
     #whatsapp-button img {
-      width: 20px;
-      margin-right: 10px;
+      width: 26px;
+      height: 26px;
     }
-
-    #chat-box {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      width: 300px;
-      background: white;
+    #popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  width: 90vw;
+  max-width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 998;
+}
+  
+    #popup img {
+      width: 100%;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      display: none;
-      font-family: Arial, sans-serif;
+      margin-top: 10px;
     }
-
-    #chat-header {
-      background-color: #075E54;
-      color: white;
-      padding: 10px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    #chat-body {
-      padding: 10px;
+  
+    #popup p {
+      margin: 10px 0;
+      font-size: 14px;
       color: #333;
     }
-
-    #chat-footer {
-      padding: 10px;
+  
+    #popup a {
+      display: block;
       text-align: center;
-    }
-
-    #chat-footer button {
-      background-color: #25D366;
+      background: #25D366;
       color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  
+    .popup-header {
+      color: black;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+    .popup-header button {
+      background: none;
       border: none;
-      padding: 8px 15px;
-      border-radius: 20px;
+      color: black;
+      font-size: 18px;
       cursor: pointer;
+    }
+  
+    .what img {
+      width: 50px;
+      height: 40px;
+    }
+  
+    @media screen and (max-width: 480px) {
+      #whatsapp-button {
+        font-size: 16px;
+        padding: 8px 16px;
+        right: 10px;
+        bottom: 10px;
+      }
+  
+      #popup {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+      }
+  
+      #popup p {
+        font-size: 13px;
+      }
+  
+      .popup-header {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
+<!-- WhatsApp Button -->
 
-  <div id="whatsapp-button" onclick="toggleChat()">
+<div id="whatsapp-button" onclick="toggleChat()">
 
-    <button  onclick="dark()" id="darkmode" style="display: none;"> <img src="/images/whatsapp-icon.png" alt=""></button>
+  <button  onclick="dark()" id="darkmode" style="display: none;"> <img src="/images/whatsapp-icon.png" alt="" class="what"></button>
 
-    <button style="background-color: #25D366;" onclick="light()" id="lightmode"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-   alt=""> Chat with Us</button>
-     </div>
-<!-- <div id="whatsapp-button" onclick="toggleChat()"> -->
-  <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> -->
-  <!-- Chat with us -->
-<!-- </div> -->
+  <button style="background-color: #25D366;" onclick="light()" id="lightmode"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+ alt=""> Chat with Us</button>
+   </div>
+<!-- <div id="whatsapp-button" onclick="close() ">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" id="hide">
+  Chat with us
+ 
+</div> 
+-->
 
-<div id="chat-box">
-  <div id="chat-header">
-    <strong>Craw Cyber Security</strong><br>
-    <small>Online</small>
+<!-- Popup Box -->
+<div id="popup">
+  <div class="popup-header">
+    OM Institute
+    <button onclick="closePopup()">&#10006;</button>
   </div>
-  <div id="chat-body">
-    Hi,<br>
-    How can I help you?
-  </div>
-  <div id="chat-footer">
-    <button onclick="window.open('https:wa.me/919999999999', '_blank')">Send WhatsApp Message</button>
-  </div>
+  <img src="/images/WhatsApp Image.jpg" alt="Support Image" />
+  <p>Hi, how can I help you?</p>
+  <a href="https://wa.me/919991157305?text=Hi%2C%20I%20need%20help" target="_blank">Send WhatsApp Message</a>
 </div>
 
 <script>
-  function toggleChat() {
-    var chatBox = document.getElementById("chat-box");
-    if (chatBox.style.display === "none" || chatBox.style.display === "") {
-      chatBox.style.display = "block";
+  const button = document.getElementById('whatsapp-button');
+  const popup = document.getElementById('popup');
+
+  let isFirstClick = true;
+
+  button.onclick = () => {
+    if (isFirstClick) {
+      popup.style.display = 'block';
+      isFirstClick = false;
     } else {
-      chatBox.style.display = "none";
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
     }
-  }
+  };
+
+  function closePopup() {
+  popup.style.display = 'none';
+  button.style.display = 'flex';
+}
 
 
-  function dark(){
+function dark(){
 
-document.getElementById("lightmode").setAttribute("style","display: block;");
+document.getElementById("lightmode").setAttribute("style","display: flex ; border: none; justify-content: center; align-items: center; background-color: transparent;");
 document.getElementById("darkmode").setAttribute("style","display: none;");
 }
 
@@ -115,11 +188,13 @@ function light(){
 
 document.getElementById("lightmode").setAttribute("style","display: block;");
 
-document.getElementById("darkmode").setAttribute("style","display: block;");
+document.getElementById("darkmode").setAttribute("style","display: block ; border: none; justify-content: center; align-items: center; background-color: transparent;");
 document.getElementById("lightmode").setAttribute("style","display: none;");
 
 
 }
+
+
 </script>
 
 </body>

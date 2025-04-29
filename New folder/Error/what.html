@@ -3,112 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <title>Book a Trial Demo Class</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    /* Overlay background */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-    }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 20px; /* Add padding to avoid edge overlap */
+    box-sizing: border-box;
+  }
 
-    /* Popup form */
+  .form-container {
+    background: #00aaff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 100%;
+    /* height: 90vh; */
+    max-width: 370px;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .form-container h2{
+    font-size: 26px;
+  }
+
+  .form-container input,
+  .form-container select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /* padding-right: 15px; */
+  }
+
+  .form-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .submit-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .submit-btn:hover {
+    background-color: #333;
+  }
+
+  .call-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .open-btn {
+    padding: 12px 20px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: sideways-lr;
+    text-align: right;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 800;
+  }
+
+  .open-btn:hover {
+    background: #005fa3;
+  }
+
+  @media screen and (max-width: 480px) {
     .form-container {
-      background: #00aaff;
-      padding: 30px 20px;
-      border-radius: 10px;
-      width: 300px;
-      color: white;
-      text-align: center;
-      position: relative;
-    }
-
-    .form-container input, .form-container select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .form-container input[type="checkbox"] {
-      width: auto;
-      margin-right: 10px;
-    }
-
-    .submit-btn {
-      background-color: #000;
-      color: white;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      border-radius: 5px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background-color: #333;
+      padding: 25px 15px;
     }
 
     .call-text {
-      font-size: 12px;
-      margin-bottom: 15px;
+      font-size: 13px;
     }
 
-    /* Close button */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
+    .submit-btn {
+      font-size: 15px;
     }
 
-    /* Button to open popup */
     .open-btn {
-      padding: 12px 20px;
-      background: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
       font-size: 16px;
+      padding: 10px;
     }
-
-    .open-btn:hover {
-      background: #005fa3;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
 <!-- Button to open the form -->
-<button class="open-btn" onclick="openPopup()">Book Trial Demo Class</button>
+<button class="open-btn" onclick="openPopup()">Book Free Demo</button>
 
 <!-- Popup overlay and form -->
 <div class="overlay" id="popupForm">
   <div class="form-container">
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <h2>Book a Trial Demo Class</h2>
-    <div class="call-text">Training Available 24/7 | Call at <br> ‪+91 9991157305‬</div>
+    <div class="call-text">Training Available 24/7 | Call at <br> +91 9991157305</div>
 
     <form action="#">
       <input type="text" placeholder="Type Your Name" required>
@@ -116,9 +151,9 @@
       <input type="tel" placeholder="Contact Number" required>
       <select required>
         <option value="">Select Training Course</option>
-        <option value="cybersecurity">Cyber Security</option>
-        <option value="ethicalhacking">Ethical Hacking</option>
-        <option value="networking">Networking</option>
+        <option value="cybersecurity">Digital Marketing</option>
+        <option value="ethicalhacking">Web Developer</option>
+        <option value="networking">Excel</option>
         <option value="other">Other</option>
       </select>
       

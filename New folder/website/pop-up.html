@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Trial Demo Class</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Overlay background */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    /* Popup form */
+    .form-container {
+      background: #00aaff;
+      padding: 30px 20px;
+      border-radius: 10px;
+      width: 300px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .form-container input, .form-container select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form-container input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #333;
+    }
+
+    .call-text {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Button to open popup */
+    .open-btn {
+      padding: 12px 20px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: sideways-lr;
+      text-align: right;
+      /* text-orientation: mixed; */
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .open-btn:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Button to open the form -->
+<button class="open-btn" onclick="openPopup()">Book Free Demo </button>
+
+<!-- Popup overlay and form -->
+<div class="overlay" id="popupForm">
+  <div class="form-container">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Book a Trial Demo Class</h2>
+    <div class="call-text">Training Available 24/7 | Call at <br> +91 9991157305</div>
+
+    <form action="#">
+      <input type="text" placeholder="Type Your Name" required>
+      <input type="email" placeholder="Your Email ID" required>
+      <input type="tel" placeholder="Contact Number" required>
+      <select required>
+        <option value="">Select Training Course</option>
+        <option value="cybersecurity">Digital Marketing</option>
+        <option value="ethicalhacking">Web-Developer</option>
+        <option value="networking">Excel</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <div style="text-align: left; margin-top:10px;">
+        <input type="checkbox" required> I'm not a robot
+      </div>
+
+      <button type="submit" class="submit-btn">Get Course Details →</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openPopup() {
+    document.getElementById('popupForm').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
