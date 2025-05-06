@@ -1,0 +1,126 @@
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 20px; /* Add padding to avoid edge overlap */
+    box-sizing: border-box;
+  }
+
+  .form-container {
+    background: #00aaff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 100%;
+    /* height: 90vh; */
+    max-width: 370px;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .form-container h2{
+    font-size: 26px;
+  }
+
+  .form-container input,
+  .form-container select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /* padding-right: 15px; */
+  }
+
+  .form-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .submit-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .submit-btn:hover {
+    background-color: #333;
+  }
+
+  .call-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .open-btn {
+    padding: 12px 20px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: sideways-lr;
+    text-align: right;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 800;
+  }
+
+  .open-btn:hover {
+    background: #005fa3;
+  }
+
+  @media screen and (max-width: 480px) {
+    .form-container {
+      padding: 25px 15px;
+    }
+
+    .call-text {
+      font-size: 13px;
+    }
+
+    .submit-btn {
+      font-size: 15px;
+    }
+
+    .open-btn {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
