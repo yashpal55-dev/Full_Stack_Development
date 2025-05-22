@@ -2,38 +2,35 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 
-let app = express();
+const app = express();
 
+// Define paths
+const publicPath = path.join(__dirname, '../public');
+const viewsPath = path.join(__dirname, '../views');
+const partialsPath = path.join(__dirname, '../views/partial');
+
+// Setup Handlebars engine and views location
 app.set('view engine', 'hbs');
-let webstaticPath = path.join(__dirname, '../views');
-let par = path.join(__dirname, '../views/partial');
+app.set('views', viewsPath);
+hbs.registerPartials(partialsPath);
 
-app.use('/css', express.static(path.join(__dirname, '../css')));
+// Serve static files
+app.use(express.static(publicPath));
 
-app.set('views', webstaticPath);
-
-hbs.registerPartials(par);
-
+// Routes
 app.get('/', (req, res) => {
-    res.render('index', {
-        style:"css/style.css",
-    });
-});
-app.get('/about', (req, res) => {
-    res.render('about', {
-        style:"css/about.css",
-    });
+    res.render('index', { style: '/style.css' });
 });
 
-// app.get("*", (req, res) => {
-//     res.render('404', {
-       
-//     });
+app.get('/about', (req, res) => {
+    res.render('about', { style: '/about.css' });
+});
+
+// app.get('*', (req, res) => {
+//     res.render('404');
 // });
 
-
+// Start the server
 app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+    console.log('Server is running on port 3000');
 });
-
-
