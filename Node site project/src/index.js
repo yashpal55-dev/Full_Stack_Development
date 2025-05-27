@@ -26,11 +26,13 @@ app.get('/about', (req, res) => {
     res.render('about', { style: '/about.css' });
 });
 
-// app.get('*', (req, res) => {
-//     res.render('404');
-// });
+// 404 route (should be the last route)
+app.use((req, res) => {
+    res.status(404).render('404'); // Make sure you have a 404.hbs template
+});
 
 // Start the server
 app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+    console.log('Server is running on port 3000');
 });
+
