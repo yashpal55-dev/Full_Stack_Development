@@ -11,7 +11,7 @@ const partialsPath = path.join(__dirname, '../views/partial');
 
 // Setup Handlebars engine and views location
 app.set('view engine', 'hbs');
-app.set('views', viewsPath);
+app.set('views', partialsPath);
 hbs.registerPartials(partialsPath);
 
 // Serve static files
@@ -26,13 +26,15 @@ app.get('/about', (req, res) => {
     res.render('about', { style: '/about.css' });
 });
 
-// 404 route (should be the last route)
-app.use((req, res) => {
-    res.status(404).render('404'); // Make sure you have a 404.hbs template
+
+
+app.get("*", (req, res) => {
+     res.render('404');
 });
 
 // Start the server
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
+
 
