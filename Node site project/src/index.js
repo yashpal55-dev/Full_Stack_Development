@@ -7,11 +7,11 @@ const app = express();
 // Define paths
 const publicPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../views');
-const partialsPath = path.join(__dirname, '../views/partial');
+const partialsPath = path.join(__dirname, '../views/partials'); // corrected folder name if needed
 
 // Setup Handlebars engine and views location
 app.set('view engine', 'hbs');
-app.set('views', partialsPath);
+app.set('views', viewsPath); // make sure '../views' exists and contains your .hbs files
 hbs.registerPartials(partialsPath);
 
 // Serve static files
@@ -27,9 +27,9 @@ app.get('/about', (req, res) => {
 });
 
 
-
-app.get("*", (req, res) => {
-     res.render('404');
+ 
+app.get("/404", (req, res) => {
+     res.status(404).render('404');
 });
 
 // Start the server
